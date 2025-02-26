@@ -1,0 +1,97 @@
+[gd_scene load_steps=10 format=3 uid="uid://d2fcqqnhiucpi"]
+
+[ext_resource type="Material" uid="uid://dhasvqddmgpn" path="res://materials/wall.tres" id="1_x5tov"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k8ymt"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_upju3"]
+
+[sub_resource type="Animation" id="Animation_pv1gr"]
+resource_name = "open"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ut3ga"]
+_data = {
+"open": SubResource("Animation_pv1gr")
+}
+
+[sub_resource type="Animation" id="Animation_iu3my"]
+resource_name = "open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("hinge:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, -2.1684e-19, -2.32831e-10), Vector3(0.0146136, -1.63083, -0.0493166)]
+}
+
+[sub_resource type="Animation" id="Animation_l73r5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("hinge:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -2.1684e-19, -2.32831e-10)]
+}
+
+[sub_resource type="Animation" id="Animation_jrknw"]
+resource_name = "close"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("hinge:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.0146136, -1.63083, -0.0493166), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kflbf"]
+_data = {
+"RESET": SubResource("Animation_l73r5"),
+"close": SubResource("Animation_jrknw"),
+"open": SubResource("Animation_iu3my")
+}
+
+[node name="door" type="Node3D"]
+transform = Transform3D(0.999025, 0.0320028, -0.0304026, -0.0315299, 0.999376, 0.0159111, 0.0308929, -0.014937, 0.999411, 0.468711, 0.129928, -0.0187833)
+
+[node name="hinge" type="Node3D" parent="."]
+transform = Transform3D(1, 2.32831e-10, -2.1684e-19, -2.32831e-10, 1, 0, 2.1684e-19, 5.04871e-29, 1, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="hinge"]
+transform = Transform3D(0.996433, -0.0440333, 0.0719826, 0.0453798, 0.998822, -0.0171786, -0.0711412, 0.0203838, 0.997258, -0.493997, 0.00382027, 0.0353073)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="hinge/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 2.31447, 0, 0, 0, 0.10941, 0, 0, 0)
+shape = SubResource("BoxShape3D_k8ymt")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="hinge/StaticBody3D"]
+transform = Transform3D(1.15251, 0, 0, 0, 2.34491, 0, 0, 0, 0.104325, 0, 0, 0)
+material_override = ExtResource("1_x5tov")
+mesh = SubResource("BoxMesh_upju3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="hinge/StaticBody3D"]
+root_node = NodePath("../../..")
+libraries = {
+"": SubResource("AnimationLibrary_ut3ga")
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="hinge"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_kflbf")
+}

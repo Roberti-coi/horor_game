@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dhasvqddmgpn"]
+
+[ext_resource type="Texture2D" uid="uid://b25bi0b17m5a8" path="res://textures/Door_01.jpg" id="1_36ny8"]
+
+[resource]
+albedo_texture = ExtResource("1_36ny8")
+uv1_scale = Vector3(1.15, 2.3, 1.15)
