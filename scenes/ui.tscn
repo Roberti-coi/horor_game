@@ -20,3 +20,12 @@ theme_override_icons/grabber = SubResource("ImageTexture_mlu4p")
 max_value = 1.0
 step = 0.01
 value = 1.0
+
+[node name="interact_text" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 430.0
+offset_top = 538.0
+offset_right = 777.0
+offset_bottom = 587.0
+theme_override_font_sizes/normal_font_size = 30
+text = "E для взаимодейтвия"

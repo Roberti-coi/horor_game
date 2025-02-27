@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://5uxcjp82545i"]
+[gd_scene load_steps=11 format=3 uid="uid://5uxcjp82545i"]
 
 [ext_resource type="Script" path="res://script/player.gd" id="1_g7w7x"]
 [ext_resource type="Script" path="res://script/camera.gd" id="2_3s2qh"]
@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://b40nmgjc268sk" path="res://sound/flashofon.mp3" id="4_m05bq"]
 [ext_resource type="PackedScene" uid="uid://d1jcvmpn37a3r" path="res://weapons/untitled.glb" id="4_tvnlp"]
 [ext_resource type="Shader" path="res://shader/vhs.gdshader" id="5_4jk0f"]
+[ext_resource type="Script" path="res://script/raycast.gd" id="6_3w0ex"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gc8vq"]
 
@@ -58,7 +59,12 @@ max_distance = 2.0
 [node name="shader" parent="head/Camera3D" instance=ExtResource("4_tvnlp")]
 transform = Transform3D(5.46342, 0, 0, 0, 5.46342, 0, 0, 0, 5.46342, 0.531659, -0.425363, -0.767026)
 
+[node name="RayCast3D" type="RayCast3D" parent="head"]
+transform = Transform3D(1, 0, 0, 0, -8.74228e-08, -3, 0, 2, -1.31134e-07, 0.0205553, -0.0843501, -0.517049)
+script = ExtResource("6_3w0ex")
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
 material = SubResource("ShaderMaterial_wp31i")
