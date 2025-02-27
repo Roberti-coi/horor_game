@@ -13,48 +13,48 @@ script = ExtResource("1_ma5uh")
 
 [node name="background" type="ColorRect" parent="."]
 layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 632.0
+offset_right = 1921.0
+offset_bottom = 1075.0
 color = Color(0.0562916, 0.0562916, 0.0562916, 1)
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 46.0
-offset_top = 248.0
-offset_right = 382.0
-offset_bottom = 312.0
+offset_left = 88.0
+offset_top = 280.0
+offset_right = 424.0
+offset_bottom = 344.0
 text = "SOLO"
 
 [node name="Button2" type="Button" parent="."]
 layout_mode = 0
-offset_left = 46.0
-offset_top = 501.0
-offset_right = 389.0
-offset_bottom = 565.0
+offset_left = 88.0
+offset_top = 533.0
+offset_right = 431.0
+offset_bottom = 597.0
 text = "EXIT"
 
 [node name="Button3" type="Button" parent="."]
 layout_mode = 0
-offset_left = 46.0
-offset_top = 409.0
-offset_right = 385.0
-offset_bottom = 473.0
+offset_left = 88.0
+offset_top = 441.0
+offset_right = 427.0
+offset_bottom = 505.0
 text = "SETTINGS"
 
 [node name="host" type="Button" parent="."]
 layout_mode = 0
-offset_left = 44.0
-offset_top = 327.0
-offset_right = 201.0
-offset_bottom = 391.0
+offset_left = 86.0
+offset_top = 359.0
+offset_right = 243.0
+offset_bottom = 423.0
 text = "HOST"
 
 [node name="join" type="Button" parent="."]
 layout_mode = 0
-offset_left = 225.0
-offset_top = 326.0
-offset_right = 382.0
-offset_bottom = 390.0
+offset_left = 267.0
+offset_top = 358.0
+offset_right = 424.0
+offset_bottom = 422.0
 text = "JOIN"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
