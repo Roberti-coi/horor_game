@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3 uid="uid://kj5ck8bhvq5c"]
+
+[ext_resource type="Script" path="res://timer/custom_label.gd" id="1_2nqo6"]
+
+[sub_resource type="GDScript" id="GDScript_3x20b"]
+script/source = "extends Node2D
+
+
+
+
+# Declare the countdown variable and assign it to the Timer node
+onready var countdown = $scenes/TimerExampleA/Timer  # Ensure the Timer node is a direct child of this node
+
+func _ready():
+	countdown.start()  # Start the timer
+	countdown.connect(\"timeout\", self, \"_on_timer_timeout\")  # Connect the timeout signal
+
+func _on_timer_timeout() -> void:
+	# This is called when the timer times out
+	print(\"Timer has finished!\")  # Notify that the timer has finished
+
+	# Stop the timer if you don't want it to restart automatically
+	countdown.stop()
+
+	# Optionally reset the timer if you want to start it again
+	countdown.wait_time = 30  # Set a new wait time (e.g., 30 seconds)
+	countdown.start()  # Restart the timer
+
+	# Trigger other game logic here, like ending a game round or showing a message
+"
+
+[node name="TimerExampleA" type="Node2D"]
+script = SubResource("GDScript_3x20b")
+
+[node name="customLabel" type="Label" parent="."]
+offset_left = 39.0
+offset_top = 28.0
+offset_right = 103.0
+offset_bottom = 51.0
+text = "00:00:00"
+script = ExtResource("1_2nqo6")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

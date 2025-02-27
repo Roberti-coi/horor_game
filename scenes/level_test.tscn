@@ -1,10 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://bg53yb211fskt"]
+[gd_scene load_steps=13 format=3 uid="uid://bg53yb211fskt"]
 
 [ext_resource type="PackedScene" uid="uid://l6bygym2fumk" path="res://scenes/ui.tscn" id="1_xlsrt"]
 [ext_resource type="PackedScene" uid="uid://5uxcjp82545i" path="res://scenes/player.tscn" id="1_y7635"]
+[ext_resource type="PackedScene" uid="uid://d162vdbggbvqu" path="res://scenes/pause_menu.tscn" id="2_cxsrc"]
 [ext_resource type="Material" uid="uid://fch7gfcxx46w" path="res://materials/wall.tres" id="2_lstc3"]
 [ext_resource type="PackedScene" uid="uid://b7vx3kod77vvk" path="res://scenes/light.tscn" id="4_d3orr"]
 [ext_resource type="PackedScene" uid="uid://guan511yry8q" path="res://scenes/door.tscn" id="5_34vep"]
+[ext_resource type="PackedScene" uid="uid://bbt83gk3tc8dw" path="res://scenes/radio.tscn" id="6_u111r"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_j16wm"]
 sky_top_color = Color(0.32666, 0.436979, 0.705761, 1)
@@ -105,3 +107,13 @@ mesh = SubResource("BoxMesh_1gwoq")
 
 [node name="Door" parent="." instance=ExtResource("5_34vep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.89583, 0)
+
+[node name="radio" parent="." instance=ExtResource("6_u111r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.54088, 1.25233, 4.4646)
+
+[node name="Pause_menu" parent="." instance=ExtResource("2_cxsrc")]
+visible = false
+offset_left = 2.0
+offset_top = -17.0
+offset_right = 2.0
+offset_bottom = -17.0

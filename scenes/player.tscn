@@ -54,6 +54,7 @@ script = ExtResource("3_67xho")
 [node name="toggle" type="AudioStreamPlayer3D" parent="head/Camera3D/flash"]
 transform = Transform3D(0.976424, 0, 0, 0, 0.976424, 0, 0, 0, 0.976424, 0.000756621, 0.138902, 0.201563)
 stream = ExtResource("4_m05bq")
+max_db = 6.0
 max_distance = 2.0
 
 [node name="shader" parent="head/Camera3D" instance=ExtResource("4_tvnlp")]
