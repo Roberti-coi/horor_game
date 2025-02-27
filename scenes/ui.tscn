@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://l6bygym2fumk"]
+[gd_scene load_steps=3 format=3 uid="uid://l6bygym2fumk"]
+
+[ext_resource type="Script" path="res://script/timer.gd" id="1_21b5m"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_mlu4p"]
 
@@ -29,3 +31,12 @@ offset_right = 777.0
 offset_bottom = 587.0
 theme_override_font_sizes/normal_font_size = 30
 text = "E для взаимодейтвия"
+
+[node name="timer" type="Label" parent="."]
+layout_mode = 0
+offset_left = 179.0
+offset_top = 521.0
+offset_right = 243.0
+offset_bottom = 544.0
+text = "00:00:00"
+script = ExtResource("1_21b5m")
