@@ -40,8 +40,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.732031, 0)
 script = ExtResource("2_3s2qh")
 
 [node name="Camera3D" type="Camera3D" parent="head"]
-doppler_tracking = 2
-size = 3.79918
 
 [node name="RayCast3D" type="RayCast3D" parent="head"]
 transform = Transform3D(1, 0, 0, 0, -8.74228e-08, -3, 0, 2, -1.31134e-07, 0.0205553, -0.0843501, -0.517049)

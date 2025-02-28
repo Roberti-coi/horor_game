@@ -8,16 +8,17 @@
 [ext_resource type="PackedScene" uid="uid://guan511yry8q" path="res://scenes/door.tscn" id="5_34vep"]
 [ext_resource type="PackedScene" uid="uid://bbt83gk3tc8dw" path="res://scenes/radio.tscn" id="6_u111r"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_j16wm"]
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7r7bs"]
 sky_top_color = Color(0.32666, 0.436979, 0.705761, 1)
 sky_horizon_color = Color(0.631665, 0.651495, 0.70969, 1)
 ground_horizon_color = Color(0.631665, 0.651495, 0.70969, 1)
 
 [sub_resource type="Sky" id="Sky_6wy80"]
-sky_material = SubResource("ProceduralSkyMaterial_j16wm")
+sky_material = SubResource("ProceduralSkyMaterial_7r7bs")
 
-[sub_resource type="Environment" id="Environment_wkwjy"]
+[sub_resource type="Environment" id="Environment_i130j"]
 background_mode = 1
+background_color = Color(0.111197, 0.111197, 0.111197, 1)
 sky = SubResource("Sky_6wy80")
 tonemap_mode = 2
 glow_enabled = true
@@ -31,10 +32,10 @@ glow_enabled = true
 [node name="UI" parent="." instance=ExtResource("1_xlsrt")]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_wkwjy")
+environment = SubResource("Environment_i130j")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.736058, -0.541673, -0.405966, -0.673848, 0.643384, 0.363299, 0.0644032, 0.540968, -0.838574, 6.95258, 7.86828, 4.87301)
+transform = Transform3D(-0.736058, -0.541673, -0.405966, -0.673848, 0.643384, 0.363299, 0.0644032, 0.540968, -0.838574, 6.95258, 6.13574, 4.87301)
 
 [node name="player" parent="." instance=ExtResource("1_y7635")]
 transform = Transform3D(0.729625, 0, -0.683847, 0, 1, 0, 0.683847, 0, 0.729625, 6.2879, 1.44408, 10.4847)

@@ -1,7 +1,24 @@
-[gd_scene load_steps=4 format=3 uid="uid://l6bygym2fumk"]
+[gd_scene load_steps=6 format=3 uid="uid://l6bygym2fumk"]
 
+[ext_resource type="Shader" path="res://shader/vhs.gdshader" id="1_4wely"]
 [ext_resource type="Script" path="res://script/timer.gd" id="1_21b5m"]
 [ext_resource type="FontFile" uid="uid://cwjuco6a2m8d8" path="res://font/VCR_OSD_MONO_1.001.ttf" id="1_f4m7s"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_otwl6"]
+shader = ExtResource("1_4wely")
+shader_parameter/vhs_resolution = Vector2(320, 240)
+shader_parameter/samples = 3
+shader_parameter/crease_noise = 1.0
+shader_parameter/crease_opacity = 0.5
+shader_parameter/filter_intensity = 0.1
+shader_parameter/tape_crease_smear = 0.2
+shader_parameter/tape_crease_intensity = 0.1
+shader_parameter/tape_crease_jitter = 0.1
+shader_parameter/tape_crease_speed = 0.5
+shader_parameter/tape_crease_discoloration = 0.0
+shader_parameter/bottom_border_thickness = 3.0
+shader_parameter/bottom_border_jitter = 6.0
+shader_parameter/noise_intensity = 0.2
 
 [sub_resource type="ImageTexture" id="ImageTexture_mlu4p"]
 
@@ -10,12 +27,19 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 1.0
-offset_top = 6.0
-offset_right = 1.0
-offset_bottom = 6.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_otwl6")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
 
 [node name="sprint_slider" type="VSlider" parent="."]
 layout_mode = 0

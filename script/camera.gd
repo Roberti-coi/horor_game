@@ -10,3 +10,9 @@ func _input(event: InputEvent) -> void:
 		get_parent().rotate_y( -event.relative.x * sens)
 		rotate_x( -event.relative.y * sens)
 		rotation.x = clamp(rotation.x, deg_to_rad(-90), deg_to_rad(90))
+		
+	if event is InputEventKey:
+		if Input.is_action_pressed('zoom'):
+			$Camera3D.fov = 25
+		else:
+			$Camera3D.fov = 75
