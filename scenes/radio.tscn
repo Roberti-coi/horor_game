@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=4 uid="uid://bbt83gk3tc8dw"]
+[gd_scene load_steps=7 format=4 uid="uid://bbt83gk3tc8dw"]
 
 [ext_resource type="Texture2D" uid="uid://d26elr7nubutv" path="res://weapons/psx_radios_T_Radio_02.png" id="1_1omet"]
+[ext_resource type="Script" path="res://script/radio.gd" id="1_72n8e"]
 [ext_resource type="AudioStream" uid="uid://dma65wghb4s1l" path="res://sound/radio.wav" id="2_m8t2h"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bisyq"]
@@ -45,6 +46,7 @@ shadow_mesh = SubResource("ArrayMesh_w02ur")
 [node name="radio" type="Node3D"]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
+script = ExtResource("1_72n8e")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 
@@ -52,7 +54,7 @@ shadow_mesh = SubResource("ArrayMesh_w02ur")
 mesh = SubResource("ArrayMesh_l3w5p")
 skeleton = NodePath("")
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+[node name="radio_sound" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.120854, 0)
 stream = ExtResource("2_m8t2h")
 autoplay = true

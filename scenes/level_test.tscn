@@ -1,5 +1,6 @@
-[gd_scene load_steps=13 format=3 uid="uid://bg53yb211fskt"]
+[gd_scene load_steps=17 format=3 uid="uid://bg53yb211fskt"]
 
+[ext_resource type="Script" path="res://script/photocamera_pup.gd" id="1_tj6qv"]
 [ext_resource type="PackedScene" uid="uid://l6bygym2fumk" path="res://scenes/ui.tscn" id="1_xlsrt"]
 [ext_resource type="PackedScene" uid="uid://5uxcjp82545i" path="res://scenes/player.tscn" id="1_y7635"]
 [ext_resource type="PackedScene" uid="uid://d162vdbggbvqu" path="res://scenes/pause_menu.tscn" id="2_cxsrc"]
@@ -7,6 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://b7vx3kod77vvk" path="res://scenes/light.tscn" id="4_d3orr"]
 [ext_resource type="PackedScene" uid="uid://guan511yry8q" path="res://scenes/door.tscn" id="5_34vep"]
 [ext_resource type="PackedScene" uid="uid://bbt83gk3tc8dw" path="res://scenes/radio.tscn" id="6_u111r"]
+[ext_resource type="PackedScene" uid="uid://cl8304qtlqriw" path="res://scenes/battery_pup.tscn" id="8_fqxlk"]
+[ext_resource type="PackedScene" uid="uid://dmphxkwmkheos" path="res://scenes/photocamera_pup.tscn" id="10_db8p6"]
+[ext_resource type="PackedScene" uid="uid://bmlskufxn7bfd" path="res://scenes/termometr_pup.tscn" id="11_xfrjb"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7r7bs"]
 sky_top_color = Color(0.32666, 0.436979, 0.705761, 1)
@@ -28,6 +32,7 @@ glow_enabled = true
 [sub_resource type="BoxMesh" id="BoxMesh_1gwoq"]
 
 [node name="levelTEST" type="Node3D"]
+script = ExtResource("1_tj6qv")
 
 [node name="UI" parent="." instance=ExtResource("1_xlsrt")]
 
@@ -109,6 +114,9 @@ mesh = SubResource("BoxMesh_1gwoq")
 [node name="Door" parent="." instance=ExtResource("5_34vep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.89583, 0)
 
+[node name="battery_pup" parent="." instance=ExtResource("8_fqxlk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.06738, 0.852727, 0)
+
 [node name="radio" parent="." instance=ExtResource("6_u111r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.54088, 1.25233, 4.4646)
 
@@ -118,3 +126,9 @@ offset_left = 2.0
 offset_top = -17.0
 offset_right = 2.0
 offset_bottom = -17.0
+
+[node name="camera_pup" parent="." instance=ExtResource("10_db8p6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.72511, 0.895442, 0)
+
+[node name="termometr_pup" parent="." instance=ExtResource("11_xfrjb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.82361, 1, 0)

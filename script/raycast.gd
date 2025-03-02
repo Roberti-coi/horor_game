@@ -6,9 +6,7 @@ func _ready():
 	# Получаем ссылку  взаимодействия 
 	int_text = get_node("/root/" + get_tree().current_scene.name + "/UI/interact_text")
 	int_text.visible = false  # Скрываем текст взаимодействия при старте
-
 func _process(_delta):
-	
 	if is_colliding():
 		var hit = get_collider()  
 		

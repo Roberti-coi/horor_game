@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://ccslvw24cmt1y"]
+
+[ext_resource type="Texture2D" uid="uid://cp73xs5365lm7" path="res://textures/batteraag.png" id="1_allv6"]
+
+[resource]
+albedo_texture = ExtResource("1_allv6")
+uv1_scale = Vector3(2, 0.3, 2)
+uv1_triplanar = true
+uv1_triplanar_sharpness = 1.07177

@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://l6bygym2fumk"]
+[gd_scene load_steps=7 format=3 uid="uid://l6bygym2fumk"]
 
 [ext_resource type="Shader" path="res://shader/vhs.gdshader" id="1_4wely"]
 [ext_resource type="Script" path="res://script/timer.gd" id="1_21b5m"]
@@ -22,11 +22,17 @@ shader_parameter/noise_intensity = 0.2
 
 [sub_resource type="ImageTexture" id="ImageTexture_mlu4p"]
 
+[sub_resource type="ImageTexture" id="ImageTexture_csvau"]
+
 [node name="UI" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -96.0
+offset_top = 4.0
+offset_right = -96.0
+offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -43,13 +49,13 @@ color = Color(0, 0, 0, 1)
 
 [node name="sprint_slider" type="VSlider" parent="."]
 layout_mode = 0
-offset_left = 1715.0
-offset_top = 830.0
-offset_right = 1882.0
-offset_bottom = 1010.0
+offset_left = 1809.0
+offset_top = 779.0
+offset_right = 1976.0
+offset_bottom = 959.0
 theme_override_icons/grabber = SubResource("ImageTexture_mlu4p")
 max_value = 1.0
-step = 0.01
+step = 0.2
 value = 1.0
 
 [node name="interact_text" type="RichTextLabel" parent="."]
@@ -91,3 +97,30 @@ offset_bottom = 892.0
 theme_override_fonts/font = ExtResource("1_f4m7s")
 theme_override_font_sizes/font_size = 32
 text = "AM"
+
+[node name="flashlight_stuff" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 1477.0
+offset_top = 900.0
+offset_right = 1783.0
+offset_bottom = 986.0
+
+[node name="flashlight_text" type="RichTextLabel" parent="flashlight_stuff"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 31.0
+offset_right = 212.0
+offset_bottom = 80.0
+theme_override_font_sizes/normal_font_size = 30
+text = "Energy"
+
+[node name="flashlight_slider" type="HSlider" parent="flashlight_stuff"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 21.0
+offset_right = 296.0
+offset_bottom = 37.0
+theme_override_icons/grabber = SubResource("ImageTexture_csvau")
+max_value = 1.0
+step = 0.0
+value = 1.0

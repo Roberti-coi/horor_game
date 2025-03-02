@@ -8,7 +8,7 @@ func _ready() -> void:
 
 func _process(delta):
 	if timer_on:
-		time += delta * 3  # Увеличиваем игровое время
+		time += delta 
 		var secs = int(fmod(time, 60))  # Секунды
 		var mins = int(fmod(time / 60, 60))  # Минуты
 		var hr = int(fmod(time / 3600, 24))  # Часы

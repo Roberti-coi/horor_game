@@ -48,7 +48,7 @@ transform = Transform3D(1, 0, 0, 0, -8.74228e-08, -3, 0, 2, -1.31134e-07, 0.0205
 script = ExtResource("6_3w0ex")
 
 [node name="flash item" parent="head" instance=ExtResource("3_858tf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+transform = Transform3D(1, 0, 0, 0, 0.978213, 0.207604, 0, -0.207604, 0.978213, 0.56004, 0, -0.811237)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 visible = false
