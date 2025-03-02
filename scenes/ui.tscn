@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://l6bygym2fumk"]
+[gd_scene load_steps=9 format=3 uid="uid://l6bygym2fumk"]
 
 [ext_resource type="Shader" path="res://shader/vhs.gdshader" id="1_4wely"]
 [ext_resource type="Script" path="res://script/timer.gd" id="1_21b5m"]
 [ext_resource type="FontFile" uid="uid://cwjuco6a2m8d8" path="res://font/VCR_OSD_MONO_1.001.ttf" id="1_f4m7s"]
+[ext_resource type="Texture2D" uid="uid://1kkd3snrq04b" path="res://textures/interact.png" id="4_328wb"]
+[ext_resource type="Texture2D" uid="uid://dybkhryrc1p5g" path="res://textures/guide.png" id="5_4ph4w"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_otwl6"]
 shader = ExtResource("1_4wely")
@@ -29,10 +31,10 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -96.0
-offset_top = 4.0
-offset_right = -96.0
-offset_bottom = 4.0
+offset_left = -6.0
+offset_top = -5.0
+offset_right = -6.0
+offset_bottom = -5.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -58,7 +60,8 @@ max_value = 1.0
 step = 0.2
 value = 1.0
 
-[node name="interact_text" type="RichTextLabel" parent="."]
+[node name="interact_text1" type="RichTextLabel" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 704.0
 offset_top = 742.0
@@ -124,3 +127,21 @@ theme_override_icons/grabber = SubResource("ImageTexture_csvau")
 max_value = 1.0
 step = 0.0
 value = 1.0
+
+[node name="interact_text" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 972.0
+offset_top = 540.0
+offset_right = 1708.0
+offset_bottom = 1175.0
+scale = Vector2(0.122329, 0.126144)
+texture = ExtResource("4_328wb")
+
+[node name="guide" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 32.0
+offset_right = 776.0
+offset_bottom = 976.0
+scale = Vector2(0.1, 0.103)
+texture = ExtResource("5_4ph4w")
