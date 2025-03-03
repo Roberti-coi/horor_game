@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://l6bygym2fumk"]
+[gd_scene load_steps=10 format=3 uid="uid://l6bygym2fumk"]
 
 [ext_resource type="Shader" path="res://shader/vhs.gdshader" id="1_4wely"]
 [ext_resource type="Script" path="res://script/timer.gd" id="1_21b5m"]
 [ext_resource type="FontFile" uid="uid://cwjuco6a2m8d8" path="res://font/VCR_OSD_MONO_1.001.ttf" id="1_f4m7s"]
 [ext_resource type="Texture2D" uid="uid://1kkd3snrq04b" path="res://textures/interact.png" id="4_328wb"]
 [ext_resource type="Texture2D" uid="uid://dybkhryrc1p5g" path="res://textures/guide.png" id="5_4ph4w"]
+[ext_resource type="Script" path="res://script/sanity_graf.gd" id="6_e6mq3"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_otwl6"]
 shader = ExtResource("1_4wely")
@@ -145,3 +146,203 @@ offset_right = 776.0
 offset_bottom = 976.0
 scale = Vector2(0.1, 0.103)
 texture = ExtResource("5_4ph4w")
+
+[node name="SanityGraph" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 1490.0
+offset_top = 744.0
+offset_right = 1771.0
+offset_bottom = 888.0
+
+[node name="GridContainer" type="HBoxContainer" parent="SanityGraph"]
+layout_mode = 1
+anchors_preset = -1
+offset_top = -1.0
+offset_right = 1123.0
+offset_bottom = 577.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.25, 0.25)
+theme_override_constants/separation = 50
+
+[node name="ColorRect" type="ColorRect" parent="SanityGraph/GridContainer"]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+
+[node name="ColorRect2" type="ColorRect" parent="SanityGraph/GridContainer"]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+
+[node name="ColorRect3" type="ColorRect" parent="SanityGraph/GridContainer"]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+
+[node name="ColorRect4" type="ColorRect" parent="SanityGraph/GridContainer"]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+
+[node name="ColorRect5" type="ColorRect" parent="SanityGraph/GridContainer"]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+
+[node name="ColorRect6" type="ColorRect" parent="SanityGraph/GridContainer"]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+
+[node name="ColorRect7" type="ColorRect" parent="SanityGraph/GridContainer"]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+
+[node name="ColorRect8" type="ColorRect" parent="SanityGraph/GridContainer"]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+
+[node name="ColorRect9" type="ColorRect" parent="SanityGraph/GridContainer"]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+
+[node name="ColorRect10" type="ColorRect" parent="SanityGraph/GridContainer"]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+
+[node name="ColorRect11" type="ColorRect" parent="SanityGraph/GridContainer"]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+
+[node name="ColorRect12" type="ColorRect" parent="SanityGraph/GridContainer"]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+
+[node name="ColorRect13" type="ColorRect" parent="SanityGraph/GridContainer"]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+
+[node name="ColorRect14" type="ColorRect" parent="SanityGraph/GridContainer"]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+
+[node name="ColorRect15" type="ColorRect" parent="SanityGraph/GridContainer"]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+
+[node name="ColorRect16" type="ColorRect" parent="SanityGraph/GridContainer"]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+
+[node name="ColorRect17" type="ColorRect" parent="SanityGraph/GridContainer"]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+
+[node name="ColorRect18" type="ColorRect" parent="SanityGraph/GridContainer"]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+
+[node name="ColorRect19" type="ColorRect" parent="SanityGraph/GridContainer"]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+
+[node name="ColorRect20" type="ColorRect" parent="SanityGraph/GridContainer"]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+
+[node name="ColorRect21" type="ColorRect" parent="SanityGraph/GridContainer"]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+
+[node name="ColorRect22" type="ColorRect" parent="SanityGraph/GridContainer"]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+
+[node name="ColorRect23" type="ColorRect" parent="SanityGraph/GridContainer"]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+
+[node name="Control" type="Control" parent="SanityGraph"]
+layout_mode = 3
+anchors_preset = 0
+offset_top = -1.0
+offset_right = 1123.0
+offset_bottom = 577.0
+scale = Vector2(0.25, 0.25)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SanityGraph/Control"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+grow_vertical = 2
+
+[node name="SanityGraf" type="Line2D" parent="SanityGraph/Control/HBoxContainer"]
+default_color = Color(0.015, 0.5, 0.0230833, 1)
+script = ExtResource("6_e6mq3")
+
+[node name="SanityTimer" type="Timer" parent="SanityGraph"]
+wait_time = 0.5
+autostart = true
+
+[node name="HeartbeatTimer" type="Timer" parent="SanityGraph"]
+wait_time = 5.0
+autostart = true
+
+[node name="VSlider" type="VSlider" parent="SanityGraph"]
+visible = false
+layout_mode = 0
+offset_left = -105.0
+offset_top = 148.0
+offset_right = -49.0
+offset_bottom = 367.0
+max_value = 600.0
+step = 50.0
+value = 300.0
+
+[connection signal="timeout" from="SanityGraph/SanityTimer" to="SanityGraph/Control/HBoxContainer/SanityGraf" method="_on_sanity_timer_timeout"]
+[connection signal="timeout" from="SanityGraph/HeartbeatTimer" to="SanityGraph/Control/HBoxContainer/SanityGraf" method="_on_heartbeat_timer_timeout"]

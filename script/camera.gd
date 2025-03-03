@@ -1,6 +1,7 @@
 extends Node3D
 
 var sens = 0.005
+var zoom_speed = 5
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -13,6 +14,8 @@ func _input(event: InputEvent) -> void:
 		
 	if event is InputEventKey:
 		if Input.is_action_pressed('zoom'):
-			$Camera3D.fov = 25
+			if $Camera3D.fov >= 25:
+				$Camera3D.fov -= 1 + zoom_speed
+				
 		else:
 			$Camera3D.fov = 75
