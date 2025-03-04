@@ -1,0 +1,54 @@
+[gd_scene load_steps=2 format=3 uid="uid://d162vdbggbvqu"]
+
+[ext_resource type="Script" path="res://script/pause_menu.gd" id="1_bko41"]
+
+[node name="Pause_menu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bko41")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.192157, 0.192157, 0.192157, 0.501961)
+
+[node name="EXIT MENU" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 462.0
+offset_right = 431.0
+offset_bottom = 526.0
+text = "EXIT MENU"
+
+[node name="SETTING" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 367.0
+offset_right = 427.0
+offset_bottom = 431.0
+text = "SETTINGS"
+
+[node name="RETURN" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 263.0
+offset_right = 427.0
+offset_bottom = 327.0
+text = "RETURN"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect"]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 10.0
+offset_right = 104.0
+offset_bottom = 49.0
+text = "V 1.0"
+
+[connection signal="pressed" from="ColorRect/EXIT MENU" to="." method="back_to_menu"]
+[connection signal="pressed" from="ColorRect/RETURN" to="." method="resume"]

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmlskufxn7bfd"]
+
+[ext_resource type="Script" path="res://script/termometr_pup.gd" id="1_0er8h"]
+[ext_resource type="PackedScene" uid="uid://d4nwf5w2pusim" path="res://weapons/termometr.glb" id="1_q1rbx"]
+
+[node name="termometr_pup" type="Node3D"]
+script = ExtResource("1_0er8h")
+
+[node name="termometr" parent="." instance=ExtResource("1_q1rbx")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)

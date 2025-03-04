@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmphxkwmkheos"]
+
+[ext_resource type="Script" path="res://script/photocamera_pup.gd" id="1_2bcmf"]
+[ext_resource type="PackedScene" uid="uid://dl20tkv37aqr7" path="res://weapons/photocamera.glb" id="1_nvt8m"]
+
+[node name="photocamera_pup" type="Node3D"]
+script = ExtResource("1_2bcmf")
+
+[node name="photocamera" parent="." instance=ExtResource("1_nvt8m")]
+transform = Transform3D(3, 0, 0, 0, 3.162, 0, 0, 0, 2.786, 0, -0.00232807, 0)

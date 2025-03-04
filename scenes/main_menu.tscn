@@ -1,0 +1,72 @@
+[gd_scene load_steps=2 format=3 uid="uid://bwo2y7hfqwm3w"]
+
+[ext_resource type="Script" path="res://script/main_menu.gd" id="1_ma5uh"]
+
+[node name="Main_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ma5uh")
+
+[node name="background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0562916, 0.0562916, 0.0562916, 1)
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 280.0
+offset_right = 424.0
+offset_bottom = 344.0
+text = "SOLO"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 533.0
+offset_right = 431.0
+offset_bottom = 597.0
+text = "EXIT"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 441.0
+offset_right = 427.0
+offset_bottom = 505.0
+text = "SETTINGS"
+
+[node name="host" type="Button" parent="."]
+layout_mode = 0
+offset_left = 86.0
+offset_top = 359.0
+offset_right = 243.0
+offset_bottom = 423.0
+text = "HOST"
+
+[node name="join" type="Button" parent="."]
+layout_mode = 0
+offset_left = 267.0
+offset_top = 358.0
+offset_right = 424.0
+offset_bottom = 422.0
+text = "JOIN"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 10.0
+offset_right = 104.0
+offset_bottom = 49.0
+text = "V 1.0"
+
+[connection signal="pressed" from="Button" to="." method="play"]
+[connection signal="pressed" from="Button2" to="." method="quit"]
