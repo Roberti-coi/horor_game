@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://fch7gfcxx46w"]
+
+[ext_resource type="Texture2D" uid="uid://c3410f6316u7h" path="res://textures/garagewall.jpg" id="1_3c2yv"]
+
+[resource]
+albedo_texture = ExtResource("1_3c2yv")
+uv1_scale = Vector3(4, 1, 4)
+uv1_triplanar = true
+uv1_triplanar_sharpness = 0.965937

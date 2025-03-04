@@ -53,9 +53,16 @@ skeleton = NodePath("")
 
 [node name="flash" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1)
+<<<<<<< HEAD
 light_energy = 3.586
 spot_range = 6.436
 spot_angle = 33.42
+=======
+light_energy = 7.95
+light_volumetric_fog_energy = 2.616
+spot_range = 29.201
+spot_angle = 31.6
+>>>>>>> horor_game/main
 spot_angle_attenuation = 0.933033
 script = ExtResource("2_aque6")
 

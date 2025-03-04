@@ -4,9 +4,15 @@
 [ext_resource type="PackedScene" uid="uid://l6bygym2fumk" path="res://scenes/ui.tscn" id="1_xlsrt"]
 [ext_resource type="PackedScene" uid="uid://5uxcjp82545i" path="res://scenes/player.tscn" id="1_y7635"]
 [ext_resource type="PackedScene" uid="uid://d162vdbggbvqu" path="res://scenes/pause_menu.tscn" id="2_cxsrc"]
+<<<<<<< HEAD
 [ext_resource type="Material" uid="uid://fch7gfcxx46w" path="res://materials/wall.tres" id="2_lstc3"]
 [ext_resource type="PackedScene" uid="uid://b7vx3kod77vvk" path="res://scenes/light.tscn" id="4_d3orr"]
 [ext_resource type="PackedScene" uid="uid://guan511yry8q" path="res://scenes/door.tscn" id="5_34vep"]
+=======
+[ext_resource type="PackedScene" uid="uid://b7vx3kod77vvk" path="res://scenes/light.tscn" id="4_d3orr"]
+[ext_resource type="PackedScene" uid="uid://guan511yry8q" path="res://scenes/door.tscn" id="5_34vep"]
+[ext_resource type="Material" uid="uid://l6663huddtni" path="res://materials/garagedoor.tres" id="5_d6obu"]
+>>>>>>> horor_game/main
 [ext_resource type="PackedScene" uid="uid://bbt83gk3tc8dw" path="res://scenes/radio.tscn" id="6_u111r"]
 [ext_resource type="PackedScene" uid="uid://cl8304qtlqriw" path="res://scenes/battery_pup.tscn" id="8_fqxlk"]
 [ext_resource type="PackedScene" uid="uid://dmphxkwmkheos" path="res://scenes/photocamera_pup.tscn" id="10_db8p6"]
@@ -43,10 +49,17 @@ environment = SubResource("Environment_i130j")
 transform = Transform3D(-0.736058, -0.541673, -0.405966, -0.673848, 0.643384, 0.363299, 0.0644032, 0.540968, -0.838574, 6.95258, 6.13574, 4.87301)
 
 [node name="player" parent="." instance=ExtResource("1_y7635")]
+<<<<<<< HEAD
 transform = Transform3D(0.729625, 0, -0.683847, 0, 1, 0, 0.683847, 0, 0.729625, 6.2879, 1.44408, 10.4847)
 
 [node name="light" parent="." instance=ExtResource("4_d3orr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.95696, 6.17838, 0.212428)
+=======
+transform = Transform3D(0.729625, 0, -0.683847, 0, 1, 0, 0.683847, 0, 0.729625, 6.30057, 1.44408, 10.4811)
+
+[node name="light" parent="." instance=ExtResource("4_d3orr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.95696, 6.17838, 0.179472)
+>>>>>>> horor_game/main
 
 [node name="fwl" type="Node3D" parent="."]
 
@@ -58,6 +71,10 @@ shape = SubResource("BoxShape3D_6m1nd")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="fwl/floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0052304, -0.0737095, 0.00820243)
+<<<<<<< HEAD
+=======
+material_override = ExtResource("5_d6obu")
+>>>>>>> horor_game/main
 mesh = SubResource("BoxMesh_1gwoq")
 
 [node name="floor2" type="StaticBody3D" parent="fwl"]
@@ -68,6 +85,10 @@ shape = SubResource("BoxShape3D_6m1nd")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="fwl/floor2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0052304, -0.0737095, 0.00820243)
+<<<<<<< HEAD
+=======
+material_override = ExtResource("5_d6obu")
+>>>>>>> horor_game/main
 mesh = SubResource("BoxMesh_1gwoq")
 
 [node name="wall" type="StaticBody3D" parent="fwl"]
@@ -78,7 +99,11 @@ shape = SubResource("BoxShape3D_6m1nd")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="fwl/wall"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0850323, 0.00648768)
+<<<<<<< HEAD
 material_override = ExtResource("2_lstc3")
+=======
+material_override = ExtResource("5_d6obu")
+>>>>>>> horor_game/main
 mesh = SubResource("BoxMesh_1gwoq")
 
 [node name="wall2" type="StaticBody3D" parent="fwl"]
@@ -88,7 +113,11 @@ transform = Transform3D(1.45053, 0, 0, 0, -5.82601, 0, 0, 0, 30, -13.8382, 3.238
 shape = SubResource("BoxShape3D_6m1nd")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="fwl/wall2"]
+<<<<<<< HEAD
 material_override = ExtResource("2_lstc3")
+=======
+material_override = ExtResource("5_d6obu")
+>>>>>>> horor_game/main
 mesh = SubResource("BoxMesh_1gwoq")
 
 [node name="wall3" type="StaticBody3D" parent="fwl"]
@@ -98,7 +127,11 @@ transform = Transform3D(6.34047e-08, 0, -30, 0, -5.82601, 0, 1.45053, 0, 1.31134
 shape = SubResource("BoxShape3D_6m1nd")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="fwl/wall3"]
+<<<<<<< HEAD
 material_override = ExtResource("2_lstc3")
+=======
+material_override = ExtResource("5_d6obu")
+>>>>>>> horor_game/main
 mesh = SubResource("BoxMesh_1gwoq")
 
 [node name="wall4" type="StaticBody3D" parent="fwl"]
@@ -108,7 +141,11 @@ transform = Transform3D(6.34047e-08, 0, -30, 0, -5.82601, 0, 1.45053, 0, 1.31134
 shape = SubResource("BoxShape3D_6m1nd")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="fwl/wall4"]
+<<<<<<< HEAD
 material_override = ExtResource("2_lstc3")
+=======
+material_override = ExtResource("5_d6obu")
+>>>>>>> horor_game/main
 mesh = SubResource("BoxMesh_1gwoq")
 
 [node name="Door" parent="." instance=ExtResource("5_34vep")]

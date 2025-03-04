@@ -1,10 +1,17 @@
 extends CharacterBody3D
 
 var ORIGINAL_SPEED 
+<<<<<<< HEAD
 var SPEED = 5.0
 var sprint_drain_amount = 0.3
 var sprint_refresh_amount = 0.4
 var SPRINT_SPEED = 7.0
+=======
+var SPEED = 7.0
+var sprint_drain_amount = 0.3
+var sprint_refresh_amount = 0.4
+var SPRINT_SPEED = 10.0
+>>>>>>> horor_game/main
 const JUMP_VELOCITY = 4.5
 var sprint_slider
 
