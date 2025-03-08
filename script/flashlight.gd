@@ -18,7 +18,6 @@ var drain_rate = 0.05
 func _ready():
 	flashlight_ui = get_node("/root/" + get_tree().current_scene.name + "/UI/flashlight_stuff")
 	flashlight_energy = get_node("/root/" + get_tree().current_scene.name + "/UI/flashlight_stuff/flashlight_slider")
-<<<<<<< HEAD
 	flashlight_energy.max_value = 1  # Максимальное значение
 	flashlight_energy.value = flashlight_energy.max_value  # Начальное значение энергии
 
@@ -30,24 +29,11 @@ func _process(delta):
 		$"../toggle".play()
 
 	# Проверяем, включен ли фонарик и есть ли энергия
-=======
-	flashlight_energy.max_value = 1  
-	flashlight_energy.value = flashlight_energy.max_value  
-
-func _process(delta):
-	
-	if Input.is_action_just_pressed("flashlight"):
-		visible = !visible
-		$"../toggle".play()
-
-
->>>>>>> horor_game/main
 	if visible:
 		if flashlight_energy.value > 0:
 			flashlight_energy.value -= drain_rate * delta
 			if flashlight_energy.value < 0:
 				flashlight_energy.value = 0
-<<<<<<< HEAD
 		
 				visible = false
 				flashlight_ui.visible = false  
@@ -55,8 +41,3 @@ func _process(delta):
 			# Если энергия закончилась, выключаем фонарик
 			visible = false
 			flashlight_ui.visible = false 
-=======
-		else:
-			
-			visible = false
->>>>>>> horor_game/main

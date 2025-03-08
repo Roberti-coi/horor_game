@@ -58,8 +58,4 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.120854, 0)
 stream = ExtResource("2_m8t2h")
 autoplay = true
-<<<<<<< HEAD
 max_distance = 15.0
-=======
-max_distance = 20.0
->>>>>>> horor_game/main

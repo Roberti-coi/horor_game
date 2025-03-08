@@ -11,13 +11,6 @@ material_override = ExtResource("1_7db4j")
 mesh = SubResource("SphereMesh_y41my")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
-<<<<<<< HEAD
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0276693, -0.0847787, 0.00335133)
 shadow_enabled = true
 omni_range = 8.256
-=======
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0276693, -0.441519, 0.00335133)
-light_energy = 5.687
-shadow_enabled = true
-omni_range = 14.405
->>>>>>> horor_game/main
