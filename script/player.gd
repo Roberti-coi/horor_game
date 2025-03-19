@@ -1,11 +1,11 @@
 extends CharacterBody3D
 
 var ORIGINAL_SPEED 
-var SPEED = 5.0
+var SPEED = 20.0
 var sprint_drain_amount = 0.3
 var sprint_refresh_amount = 0.4
-var SPRINT_SPEED = 7.0
-const JUMP_VELOCITY = 4.5
+var SPRINT_SPEED = 30.0
+const JUMP_VELOCITY = 10.5
 var sprint_slider
 
 
@@ -28,7 +28,7 @@ func _process(delta):
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
-		velocity += get_gravity() * delta
+		velocity += get_gravity() * 2 * delta
 
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():

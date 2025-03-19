@@ -54,7 +54,7 @@ skeleton = NodePath("")
 [node name="flash" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1)
 light_energy = 3.586
-spot_range = 6.436
+spot_range = 200.0
 spot_angle = 33.42
 spot_angle_attenuation = 0.933033
 script = ExtResource("2_aque6")

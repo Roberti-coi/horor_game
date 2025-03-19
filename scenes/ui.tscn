@@ -1,11 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://l6bygym2fumk"]
+[gd_scene load_steps=13 format=3 uid="uid://l6bygym2fumk"]
 
 [ext_resource type="Shader" path="res://shader/vhs.gdshader" id="1_4wely"]
 [ext_resource type="Script" path="res://script/timer.gd" id="1_21b5m"]
 [ext_resource type="FontFile" uid="uid://cwjuco6a2m8d8" path="res://font/VCR_OSD_MONO_1.001.ttf" id="1_f4m7s"]
 [ext_resource type="Texture2D" uid="uid://1kkd3snrq04b" path="res://textures/interact.png" id="4_328wb"]
+[ext_resource type="Script" path="res://script/fps.gd" id="4_v15e8"]
 [ext_resource type="Texture2D" uid="uid://dybkhryrc1p5g" path="res://textures/guide.png" id="5_4ph4w"]
 [ext_resource type="Script" path="res://script/sanity_graf.gd" id="6_e6mq3"]
+[ext_resource type="Texture2D" uid="uid://newen3krsby0" path="res://textures/cell.png" id="7_6xfnt"]
+[ext_resource type="Script" path="res://inventory.gd" id="7_ynxtq"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_otwl6"]
 shader = ExtResource("1_4wely")
@@ -32,10 +35,6 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -6.0
-offset_top = -5.0
-offset_right = -6.0
-offset_bottom = -5.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -102,6 +101,17 @@ theme_override_fonts/font = ExtResource("1_f4m7s")
 theme_override_font_sizes/font_size = 32
 text = "AM"
 
+[node name="FPS" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1651.0
+offset_top = 34.0
+offset_right = 1707.0
+offset_bottom = 63.0
+theme_override_fonts/font = ExtResource("1_f4m7s")
+theme_override_font_sizes/font_size = 32
+text = "FPS"
+script = ExtResource("4_v15e8")
+
 [node name="flashlight_stuff" type="Control" parent="."]
 anchors_preset = 0
 offset_left = 1477.0
@@ -146,6 +156,244 @@ offset_right = 776.0
 offset_bottom = 976.0
 scale = Vector2(0.1, 0.103)
 texture = ExtResource("5_4ph4w")
+
+[node name="Inventory" type="HBoxContainer" parent="."]
+layout_mode = 1
+offset_left = 616.0
+offset_top = 832.0
+offset_right = 1311.0
+offset_bottom = 939.0
+theme_override_constants/separation = 50
+script = ExtResource("7_ynxtq")
+
+[node name="Cell1" type="HBoxContainer" parent="Inventory"]
+layout_mode = 2
+
+[node name="Cell Number" type="Label" parent="Inventory/Cell1"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("1_f4m7s")
+theme_override_font_sizes/font_size = 24
+text = "1"
+
+[node name="Icon Container" type="VBoxContainer" parent="Inventory/Cell1"]
+layout_mode = 2
+
+[node name="Cell Number" type="Label" parent="Inventory/Cell1/Icon Container"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("1_f4m7s")
+theme_override_font_sizes/font_size = 24
+
+[node name="Cell Icon" type="TextureRect" parent="Inventory/Cell1/Icon Container"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("7_6xfnt")
+expand_mode = 2
+
+[node name="Cell Container" type="HBoxContainer" parent="Inventory/Cell1/Icon Container/Cell Icon"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = -3.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Item Contaner" type="HBoxContainer" parent="Inventory/Cell1/Icon Container/Cell Icon/Cell Container"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="Item Icon" type="TextureRect" parent="Inventory/Cell1/Icon Container/Cell Icon/Cell Container/Item Contaner"]
+layout_mode = 2
+size_flags_horizontal = 0
+expand_mode = 3
+
+[node name="Cell2" type="HBoxContainer" parent="Inventory"]
+layout_mode = 2
+
+[node name="Cell Number" type="Label" parent="Inventory/Cell2"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("1_f4m7s")
+theme_override_font_sizes/font_size = 24
+text = "2"
+
+[node name="Icon Container" type="VBoxContainer" parent="Inventory/Cell2"]
+layout_mode = 2
+
+[node name="Cell Number" type="Label" parent="Inventory/Cell2/Icon Container"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("1_f4m7s")
+theme_override_font_sizes/font_size = 24
+
+[node name="Cell Icon" type="TextureRect" parent="Inventory/Cell2/Icon Container"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("7_6xfnt")
+expand_mode = 2
+
+[node name="Cell Container" type="HBoxContainer" parent="Inventory/Cell2/Icon Container/Cell Icon"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = -3.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Item Contaner" type="HBoxContainer" parent="Inventory/Cell2/Icon Container/Cell Icon/Cell Container"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="Item Icon" type="TextureRect" parent="Inventory/Cell2/Icon Container/Cell Icon/Cell Container/Item Contaner"]
+layout_mode = 2
+size_flags_horizontal = 0
+expand_mode = 3
+
+[node name="Cell3" type="HBoxContainer" parent="Inventory"]
+layout_mode = 2
+
+[node name="Cell Number" type="Label" parent="Inventory/Cell3"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("1_f4m7s")
+theme_override_font_sizes/font_size = 24
+text = "3"
+
+[node name="Icon Container" type="VBoxContainer" parent="Inventory/Cell3"]
+layout_mode = 2
+
+[node name="Cell Number" type="Label" parent="Inventory/Cell3/Icon Container"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("1_f4m7s")
+theme_override_font_sizes/font_size = 24
+
+[node name="Cell Icon" type="TextureRect" parent="Inventory/Cell3/Icon Container"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("7_6xfnt")
+expand_mode = 2
+
+[node name="Cell Container" type="HBoxContainer" parent="Inventory/Cell3/Icon Container/Cell Icon"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = -3.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Item Contaner" type="HBoxContainer" parent="Inventory/Cell3/Icon Container/Cell Icon/Cell Container"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="Item Icon" type="TextureRect" parent="Inventory/Cell3/Icon Container/Cell Icon/Cell Container/Item Contaner"]
+layout_mode = 2
+expand_mode = 3
+
+[node name="Cell4" type="HBoxContainer" parent="Inventory"]
+layout_mode = 2
+
+[node name="Cell Number" type="Label" parent="Inventory/Cell4"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("1_f4m7s")
+theme_override_font_sizes/font_size = 24
+text = "4"
+
+[node name="Icon Container" type="VBoxContainer" parent="Inventory/Cell4"]
+layout_mode = 2
+
+[node name="Cell Number" type="Label" parent="Inventory/Cell4/Icon Container"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("1_f4m7s")
+theme_override_font_sizes/font_size = 24
+
+[node name="Cell Icon" type="TextureRect" parent="Inventory/Cell4/Icon Container"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("7_6xfnt")
+expand_mode = 2
+
+[node name="Cell Container" type="HBoxContainer" parent="Inventory/Cell4/Icon Container/Cell Icon"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = -3.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Item Contaner" type="HBoxContainer" parent="Inventory/Cell4/Icon Container/Cell Icon/Cell Container"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="Item Icon" type="TextureRect" parent="Inventory/Cell4/Icon Container/Cell Icon/Cell Container/Item Contaner"]
+layout_mode = 2
+size_flags_horizontal = 0
+expand_mode = 3
+
+[node name="Cell5" type="HBoxContainer" parent="Inventory"]
+layout_mode = 2
+
+[node name="Cell Number" type="Label" parent="Inventory/Cell5"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("1_f4m7s")
+theme_override_font_sizes/font_size = 24
+text = "5"
+
+[node name="Icon Container" type="VBoxContainer" parent="Inventory/Cell5"]
+layout_mode = 2
+
+[node name="Cell Number" type="Label" parent="Inventory/Cell5/Icon Container"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("1_f4m7s")
+theme_override_font_sizes/font_size = 24
+
+[node name="Cell Icon" type="TextureRect" parent="Inventory/Cell5/Icon Container"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("7_6xfnt")
+expand_mode = 2
+
+[node name="Cell Container" type="HBoxContainer" parent="Inventory/Cell5/Icon Container/Cell Icon"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = -3.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Item Contaner" type="HBoxContainer" parent="Inventory/Cell5/Icon Container/Cell Icon/Cell Container"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="Item Icon" type="TextureRect" parent="Inventory/Cell5/Icon Container/Cell Icon/Cell Container/Item Contaner"]
+layout_mode = 2
+size_flags_horizontal = 0
+expand_mode = 3
 
 [node name="SanityGraph" type="Control" parent="."]
 layout_mode = 1

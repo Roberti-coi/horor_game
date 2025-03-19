@@ -2,7 +2,7 @@
 
 [ext_resource type="Material" uid="uid://iijlygbb45yg" path="res://materials/floor.tres" id="1_l4gxu"]
 [ext_resource type="Material" uid="uid://b728ndamn2ptp" path="res://materials/carpet.tres" id="2_7oh3g"]
-[ext_resource type="Material" uid="uid://fch7gfcxx46w" path="res://materials/garagewall.tres" id="2_8rpkl"]
+[ext_resource type="Material" uid="uid://fch7gfcxx46w" path="res://materials/wall.tres" id="2_8rpkl"]
 [ext_resource type="Material" uid="uid://b6ycutfm6hgdk" path="res://materials/theposter.tres" id="3_8qs7i"]
 [ext_resource type="Material" uid="uid://l6663huddtni" path="res://materials/garagedoor.tres" id="3_w5tjm"]
 [ext_resource type="PackedScene" uid="uid://dmclwn6u4s7mo" path="res://weapons/low_poly_metal_shelf_-_game_ready.glb" id="6_xjel0"]
@@ -33,7 +33,7 @@ size = Vector3(1, 0.001, 1)
 transform = Transform3D(5.43535, 0, 0, 0, 5.43535, 0, 0, 0, 5.43535, 0, 0, 0)
 
 [node name="player" parent="." instance=ExtResource("16_utn0o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.20665, 1.01884)
+transform = Transform3D(-0.00841242, 0, -0.999965, 0, 1, 0, 0.999965, 0, -0.00841242, 0, 1.79472, 0)
 
 [node name="floor" type="StaticBody3D" parent="."]
 transform = Transform3D(13.6322, 0, 0, 0, -0.0828521, 0, 0, 0, 9.81461, -0.740383, -0.0618837, 1.4397)
@@ -173,11 +173,11 @@ transform = Transform3D(-0.013705, 0.58065, 0, -0.542174, -0.0146776, 0, 0, 0, 0
 [node name="camera_pup" parent="." instance=ExtResource("14_voeet")]
 transform = Transform3D(-0.820411, 0, -0.571774, 0, 1, 0, 0.571774, 0, -0.820411, -1.23456, 0.895442, 4.78544)
 
-[node name="termometr_pup" parent="." instance=ExtResource("15_v3snf")]
-transform = Transform3D(0.0400869, -0.969875, 0.240284, 0.998456, 0.0481361, 0.0277207, -0.038452, 0.238802, 0.970307, -0.523993, 0.802492, 4.853)
-
 [node name="radio" parent="." instance=ExtResource("17_vk2nc")]
 transform = Transform3D(-0.631069, 0, 0.775727, 0, 1, 0, -0.775727, 0, -0.631069, -3.41259, 1.32184, 5.2003)
+
+[node name="termometr_pup" parent="." instance=ExtResource("15_v3snf")]
+transform = Transform3D(-8.74228e-08, -2, 0, 2, -8.74228e-08, 0, 0, 0, 2, -0.528172, 0.847969, 4.90216)
 
 [node name="UI" parent="." instance=ExtResource("18_duqe1")]
 

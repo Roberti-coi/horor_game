@@ -1,6 +1,5 @@
 extends Node3D
 
-
 var battery 
 
 func _ready():

@@ -1,0 +1,85 @@
+[gd_scene load_steps=7 format=4 uid="uid://bitxj3clxtxni"]
+
+[ext_resource type="Texture2D" uid="uid://befsgwgu5sy3q" path="res://weapons/photocamera_Photo_Camera.png" id="1_p73kg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dxxul"]
+resource_name = "Photo_Camera"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_p73kg")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wsqic"]
+resource_name = "Pantalla"
+cull_mode = 2
+albedo_color = Color(0.0518868, 0.906332, 0, 1)
+emission_enabled = true
+emission = Color(0.0339627, 1, 0, 1)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_lsvhc"]
+_surfaces = [{
+"aabb": AABB(-0.638533, -0.170509, -0.342339, 1.19858, 0.549767, 0.67218),
+"format": 34896613377,
+"index_count": 288,
+"index_data": PackedByteArray("NQAMADYADAAOAAsADgADAA0AAwAAAAQAAAA1AAIANQAOAAwADgAAAAMADgA1AAAAEgADAAgAEgANAAMANwAHADQABwAJAAYACQASAAgAEgAPABMADwA3ABEANwAJAAcACQAPABIACQA3AA8ANAACADUANAAHAAIABwAAAAIABwAGAAAAAwAJAAgAAwAEAAkABAAGAAkABAAAAAYANgARADcANgAMABEADAAPABEADAALAA8AEgAOAA0AEgATAA4AEwALAA4AEwAPAAsAFAAXABUAFAAWABcAFgAZABcAFgAYABkAGAAbABkAGAAaABsAGgAdABsAGgAcAB0AHAAfAB0AHAAeAB8AHgAhAB8AHgAgACEAHQAnABsAHQAoACcAIAAjACEAIAAiACMAIgAVACMAIgAUABUAKgAxACkAKgAyADEAIwAqACEAIwArACoAGQAkABcAGQAmACQAHwAoAB0AHwApACgAFQArACMAFQAlACsAFwAlABUAFwAkACUAGwAmABkAGwAnACYAIQApAB8AIQAqACkALgAtACwALQAyADMAMgAwADEAMAAuAC8ALgAyAC0AMgAuADAAKAAvACcAKAAwAC8AJgAsACQAJgAuACwAKwAyACoAKwAzADIAKQAwACgAKQAxADAAJwAuACYAJwAvAC4AJAAtACUAJAAsAC0AJQAzACsAJQAtADMABQA1AAEABQA0ADUACgA3ABAACgA2ADcAEAA0AAUAEAA3ADQAAQA2AAoAAQA1ADYA"),
+"name": "Photo_Camera",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 56,
+"vertex_data": PackedByteArray("AABhMP//AABvUwAAAO4AALcFdgz//wAAhBPDYP//AAC3BUxU//8AAG9TAAD0HAAAAABhMAAAAAC3BXYMAAAAAIQTw2AAAAAAtwVMVAAAAADd7gAAAO4AAP//YTD//wAAR/p2DP//AAB67MNg//8AAEf6TFT//wAA//9hMAAAAADd7gAA9BwAAEf6dgwAAAAAeuzDYAAAAABH+kxUAAAAAO+jzlgXKgAA76PVlRcqAAAXys5YRkYAABfK1ZVGRgAA5dnOWFCKAADl2dWVUIoAABfKzlhazgAAF8rVlVrOAADvo85YieoAAO+j1ZWJ6gAAx33OWFrOAADHfdWVWs4AAPhtzlhQigAA+G3VlVCKAADHfc5YRkYAAMd91ZVGRgAAi8PVlfNRAADvo9WVmjoAAKPQ1ZVQigAAi8PVla3CAADvo9WVBtoAAFOE1ZWtwgAAO3fVlVCKAABThNWV81EAAIvD///zUQAA76P//5o6AACj0P//UIoAAIvD//+twgAA76P//wbaAABThP//rcIAADt3//9QigAAU4T///NRAACEEwAAAAAAAIQTAAD//wAAPPEAAP//AAA88QAAAAAAAA==")
+}, {
+"aabb": AABB(-0.247878, -0.170509, -0.266311, 0.727713, 1e-05, 0.5489),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AQACAAMAAQAAAAIA"),
+"name": "Pantalla",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAAAAAAAAAP//AAD//wAA//8AAAAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_hgqbk"]
+resource_name = "photocamera_Photo_Camera"
+_surfaces = [{
+"aabb": AABB(-0.638533, -0.170509, -0.342339, 1.19858, 0.549767, 0.67218),
+"attribute_data": PackedByteArray("YN1l/uaUkBRrqTbQa6k20Crn//oci5AUaq9l/jDQzPLoVjH2ltP/+uhWZf6wnpAUwWM20MJjNtDNv2X+5pTfaZfJ//obWmX+HIvfaZ6yzPKZATH2A7b/+pkBZf6wnt9pa6nbc2up23Ng3UdmHn6QFCrnrWlUdJAUaq8SbTDQ4HHoVkZ1ltOtaehWEm3oh5AUzb9HZh5+32nBY9tzwWPbc5fJrWkbWhJtVHTfaZ6y4HGZAUZ1A7ataZkBEm3oh99pw+0st2X+LLeZAfo/DECXNcPt2c30EqAurlCXNWX+2c0MQOsefiugLq5Q6x4MQD4Iw+1l/tk8+j+uUD4IZf5l/sPtuOdl/rjn2TyFWOFTPgjD7QzRfivfaYNkPghl/gzR4VPrHvQS32mDZOse4VOXNcPtgKCZAYVYg2SXNWX+gKAPFbUznrIUY8DSFGOeskxQrgYVQmMptTPA0kxQxDcVQp6yUDrA0oM9nrKHJ8Q3alZjKcpknrK/FMDSvxQPFcpkwNKHJ64GalaesoM9wNJQOsFi32mNzxRjr+8UY43PTFAhcX9bbE7faa/vTFAMQH9bjc9QOq/vgz2Nz4cnDEAqR2xOyjiNz78Ur++/FMFiyjiv74cnIXEqR43Pgz2v71A6/czM8htaMfaQ6szyaq8x9pDqDW9qr3Jyaq/ccv3MDW8bWnJyG1rccg=="),
+"format": 34896613399,
+"index_count": 288,
+"index_data": PackedByteArray("egAcAHwAHAAhABoAIQAHAB8ABwAAAAkAAAB6AAQAegAhABwAIQAAAAcAIQB6AAAALAAIABQALAAgAAgAfwAQAHgAEAAVAA4AFQArABMAKwAkAC0AJAB/ACgAfwAVABAAFQAkACsAFQB/ACQAeQAGAHsAeQARAAYAEgABAAUAEgAPAAEACAAWABQACAAKABYACwAPABcACwABAA8AfgApAIEAfgAeACkAHQAlACoAHQAbACUALAAiACAALAAuACIALwAbACMALwAlABsAMAA3ADEAMAA0ADcAMwA6ADYAMwA4ADoAOAA+ADoAOAA7AD4APABBAD8APABAAEEAQABHAEEAQABEAEcAQwBKAEYAQwBIAEoAQgBXAD0AQgBbAFcASABOAEoASABLAE4ATAAxAE8ATAAwADEAYAByAF4AYAB0AHIATQBfAEkATQBhAF8AOQBQADUAOQBVAFAARQBbAEIARQBcAFsAMgBhAE0AMgBUAGEANQBUADIANQBQAFQAPQBVADkAPQBXAFUASQBcAEUASQBfAFwAaQBoAGQAaABzAHUAcwBvAHAAbwBpAGsAaQBzAGgAcwBpAG8AWgBsAFgAWgBuAGwAVgBmAFIAVgBqAGYAYwB0AGAAYwB3AHQAXQBuAFoAXQBxAG4AWQBqAFYAWQBtAGoAUQBnAFMAUQBlAGcAUwB2AGIAUwBnAHYADQB7AAMADQB5AHsAGQCAACcAGQB9AIAAJgB5AAwAJgCAAHkAAgB9ABgAAgB7AH0A"),
+"material": SubResource("StandardMaterial3D_dxxul"),
+"name": "Photo_Camera",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 130,
+"vertex_data": PackedByteArray("AABhMP///78AAGEw//+qKm9TAAAA7qoqb1MAAADuqiq3BXYM////v7cFdgz//yIXtwV2DP//bjqEE8Ng////v4QTw2D//9/QtwVMVP///7+3BUxU//+QxbcFTFT//5M5b1MAAPQcqipvUwAA9ByqKgAAYTAAAAAAAABhMAAAqiq3BXYMAAAAALcFdgwAAG46twV2DAAAIheEE8NgAAAAAIQTw2AAAN/QtwVMVAAAAAC3BUxUAACQxbcFTFQAAJM53e4AAADuqird7gAAAO6qKv//YTD///+///9hMP//VNVH+nYM////v0f6dgz//8HHR/p2DP//IhN67MNg////v3rsw2D//xfaR/pMVP///79H+kxU//966kf6TFT//9zo//9hMAAAAAD//2EwAABU1d3uAAD0HKoq3e4AAPQcqipH+nYMAAAAAEf6dgwAACITR/p2DAAAwcd67MNgAAAAAHrsw2AAABfaR/pMVAAAAABH+kxUAAB66kf6TFQAANzo76POWBcqAADvo9WVFyoAAO+j1ZUXKsjMF8rOWEZGqukXys5YRkZUFhfK1ZVGRsjMF8rVlUZGqukXytWVRkZUFuXZzlhQilTV5dnVlVCKyMzl2dWVUIpU1RfKzlhazvzFF8rOWFrO/MUXytWVWs7IzBfK1ZVazvzFF8rVlVrO/MXvo85Yier/v++j1ZWJ6v+/76PVlYnqyMzHfc5YWs4COsd9zlhazvzFx33VlVrOyMzHfdWVWs4COsd91ZVazvzF+G3OWFCKqir4bdWVUIrIzPht1ZVQiqoqx33OWEZGVBbHfc5YRkZUFsd91ZVGRsjMx33VlUZGVBbHfdWVRkZUFovD1ZXzUcjMi8PVlfNRVBaLw9WV81Gq6e+j1ZWaOgAA76PVlZo6yMyj0NWVUIrIzKPQ1ZVQilTVi8PVla3CyMyLw9WVrcL8xYvD1ZWtwvzF76PVlQba/7/vo9WVBtrIzFOE1ZWtwsjMU4TVla3C/MVThNWVrcICOjt31ZVQisjMO3fVlVCKqipThNWV81HIzFOE1ZXzUVQWU4TVlfNRVBaLw///81EZ34vD///zUVQWi8P///NRqunvo///mjoAAO+j//+aOhnfo9D//1CKGd+j0P//UIpU1YvD//+twhnfi8P//63C/MWLw///rcL8xe+j//8G2v+/76P//wbaGd9ThP//rcIZ31OE//+twvzFU4T//63CAjo7d///UIoZ3zt3//9QiqoqU4T///NRGd9ThP//81FUFlOE///zUVQWhBMAAAAAAACEEwAAAAAfL4QTAAD///+/hBMAAP//Hy888QAA////vzzxAAD//8AjPPEAAP//wCM88QAAAAAAADzxAAAAAMAjPPEAAAAAwCP/f/9/VNVU1aoqVNWqKlTV/3//f1rLSOlVR6rj/3//f8SndbD/f/9/VJxVx1niSbuqKlTVqipU1f8//79U1VTV/z//v1VHquNay0jp/z//v8SndbD/P/+/VJxVx1niSbuqKlTVqipU1f9//3+qKqoq/3//f3QfF0H9En3J/3//f2CtPaX/f/9/ZLU0laQ0thb/P/+/qiqqKqoqVNWqKlTV/7//P/0Sfcl0HxdB/z//v2CtPaX/P/+/ZLU0laQ0thb/v/+//7//v8i2mqQENQQ1BDUENci2mqQENQQ1BDUENaoqqirItpqkqiqqKv8c/xz/HP8cyLaapP8c/xz/HP8c///////////Itpqk/+L/4v/i/+LItpqk/+L/4v/i/+JU1VTVyLaapFTVVNX6yvrK+sr6ysi2mqT6yvrK+sr6ysi2mqQENQQ1BDUENf+//7/ItpqkyLaapKoqqirItpqk/xz/HP8c/xz/////yLaapMi2mqT/4v/i/+L/4si2mqRU1VTVyLaapPrK+sr6yvrKBtANIAQ1BDUENQQ1/7//vwbQDSAG0A0gqiqqKgbQDSD/HP8c/xz/HP////8G0A0gBtANIP/i/+L/4v/iBtANIFTVVNUG0A0g+sr6yvrK+sr/P/+/dTA62P9//391MDrY/3//f/UiedH1InnR/7//P/UiedH1InnR")
+}, {
+"aabb": AABB(-0.247878, -0.170509, -0.266311, 0.727713, 1e-05, 0.5489),
+"attribute_data": PackedByteArray("//+L4P//cx8AAIvgAABzHw=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AQACAAMAAQAAAAIA"),
+"material": SubResource("StandardMaterial3D_wsqic"),
+"name": "Pantalla",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAAP////8AAAAAAAD/////AAD///////8AAAAA////f/8//3//P/9//z//f/8/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_lsvhc")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mubrd"]
+size = Vector3(0.123047, 0.0732422, 0.0612793)
+
+[node name="photocamera" type="StaticBody3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="Photo_Camera" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.109185, 0, 0, 0, 0, -0.109185, 0, 0.109185, 0, 0, 0, 0)
+mesh = SubResource("ArrayMesh_hgqbk")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0113525)
+shape = SubResource("BoxShape3D_mubrd")
