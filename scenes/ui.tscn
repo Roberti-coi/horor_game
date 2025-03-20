@@ -1,32 +1,23 @@
-[gd_scene load_steps=13 format=3 uid="uid://l6bygym2fumk"]
+[gd_scene load_steps=18 format=3 uid="uid://l6bygym2fumk"]
 
-[ext_resource type="Shader" path="res://shader/vhs.gdshader" id="1_4wely"]
-[ext_resource type="Script" path="res://script/timer.gd" id="1_21b5m"]
-[ext_resource type="FontFile" uid="uid://cwjuco6a2m8d8" path="res://font/VCR_OSD_MONO_1.001.ttf" id="1_f4m7s"]
-[ext_resource type="Texture2D" uid="uid://1kkd3snrq04b" path="res://textures/interact.png" id="4_328wb"]
-[ext_resource type="Script" path="res://script/fps.gd" id="4_v15e8"]
-[ext_resource type="Texture2D" uid="uid://dybkhryrc1p5g" path="res://textures/guide.png" id="5_4ph4w"]
-[ext_resource type="Script" path="res://script/sanity_graf.gd" id="6_e6mq3"]
-[ext_resource type="Texture2D" uid="uid://newen3krsby0" path="res://textures/cell.png" id="7_6xfnt"]
+[ext_resource type="Script" path="res://Script/Player/hud/timer.gd" id="1_21b5m"]
+[ext_resource type="FontFile" uid="uid://cwjuco6a2m8d8" path="res://Assets/font/VCR_OSD_MONO_1.001.ttf" id="1_f4m7s"]
+[ext_resource type="Texture2D" uid="uid://1kkd3snrq04b" path="res://textures/ui/interact.png" id="4_328wb"]
+[ext_resource type="Script" path="res://Script/Player/hud/fps.gd" id="4_v15e8"]
+[ext_resource type="Script" path="res://Script/Player/hud/sanity_graf.gd" id="6_e6mq3"]
+[ext_resource type="Texture2D" uid="uid://bbigrvaebu2pn" path="res://textures/ui/fon.png" id="6_scptr"]
+[ext_resource type="Texture2D" uid="uid://newen3krsby0" path="res://textures/ui/cell.png" id="7_6xfnt"]
 [ext_resource type="Script" path="res://inventory.gd" id="7_ynxtq"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_otwl6"]
-shader = ExtResource("1_4wely")
-shader_parameter/vhs_resolution = Vector2(320, 240)
-shader_parameter/samples = 3
-shader_parameter/crease_noise = 1.0
-shader_parameter/crease_opacity = 0.5
-shader_parameter/filter_intensity = 0.1
-shader_parameter/tape_crease_smear = 0.2
-shader_parameter/tape_crease_intensity = 0.1
-shader_parameter/tape_crease_jitter = 0.1
-shader_parameter/tape_crease_speed = 0.5
-shader_parameter/tape_crease_discoloration = 0.0
-shader_parameter/bottom_border_thickness = 3.0
-shader_parameter/bottom_border_jitter = 6.0
-shader_parameter/noise_intensity = 0.2
+[ext_resource type="Texture2D" uid="uid://sb81cqwm6gg0" path="res://textures/ui/corner.png" id="9_j1vuc"]
+[ext_resource type="Texture2D" uid="uid://1rjepmi5umcv" path="res://textures/ui/icon-battery.png" id="10_s45vn"]
+[ext_resource type="Texture2D" uid="uid://jmik2b72jxgv" path="res://textures/ui/croshair.png" id="11_nsw0u"]
+[ext_resource type="Texture2D" uid="uid://bnnboxo6vta5p" path="res://textures/ui/mozgg.png" id="12_64iu6"]
+[ext_resource type="Texture2D" uid="uid://ddboepbnlav34" path="res://textures/ui/rec.png" id="13_ucd67"]
+[ext_resource type="PackedScene" uid="uid://bwo2y7hfqwm3w" path="res://Scenes/menu/pause_menu.tscn" id="14_aosp8"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_mlu4p"]
+
+[sub_resource type="Theme" id="Theme_yagsk"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_csvau"]
 
@@ -38,23 +29,17 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="pause_menu" parent="." instance=ExtResource("14_aosp8")]
 visible = false
-material = SubResource("ShaderMaterial_otwl6")
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
 
 [node name="sprint_slider" type="VSlider" parent="."]
+visible = false
 layout_mode = 0
-offset_left = 1809.0
-offset_top = 779.0
-offset_right = 1976.0
-offset_bottom = 959.0
+offset_left = 1989.0
+offset_top = 845.0
+offset_right = 2156.0
+offset_bottom = 1025.0
 theme_override_icons/grabber = SubResource("ImageTexture_mlu4p")
 max_value = 1.0
 step = 0.2
@@ -70,48 +55,6 @@ offset_bottom = 791.0
 theme_override_font_sizes/normal_font_size = 30
 text = "E для взаимодейтвия"
 
-[node name="timer" type="Label" parent="."]
-layout_mode = 0
-offset_left = 269.0
-offset_top = 855.0
-offset_right = 421.0
-offset_bottom = 889.0
-theme_override_fonts/font = ExtResource("1_f4m7s")
-theme_override_font_sizes/font_size = 32
-text = "00:00:00"
-script = ExtResource("1_21b5m")
-
-[node name="DATA" type="Label" parent="."]
-layout_mode = 0
-offset_left = 119.0
-offset_top = 893.0
-offset_right = 285.0
-offset_bottom = 927.0
-theme_override_fonts/font = ExtResource("1_f4m7s")
-theme_override_font_sizes/font_size = 32
-text = "MAY.    11  1999"
-
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 118.0
-offset_top = 856.0
-offset_right = 169.0
-offset_bottom = 892.0
-theme_override_fonts/font = ExtResource("1_f4m7s")
-theme_override_font_sizes/font_size = 32
-text = "AM"
-
-[node name="FPS" type="Label" parent="."]
-layout_mode = 0
-offset_left = 1651.0
-offset_top = 34.0
-offset_right = 1707.0
-offset_bottom = 63.0
-theme_override_fonts/font = ExtResource("1_f4m7s")
-theme_override_font_sizes/font_size = 32
-text = "FPS"
-script = ExtResource("4_v15e8")
-
 [node name="flashlight_stuff" type="Control" parent="."]
 anchors_preset = 0
 offset_left = 1477.0
@@ -120,6 +63,7 @@ offset_right = 1783.0
 offset_bottom = 986.0
 
 [node name="flashlight_text" type="RichTextLabel" parent="flashlight_stuff"]
+visible = false
 layout_mode = 0
 offset_left = 100.0
 offset_top = 31.0
@@ -130,10 +74,12 @@ text = "Energy"
 
 [node name="flashlight_slider" type="HSlider" parent="flashlight_stuff"]
 layout_mode = 0
-offset_left = 7.0
-offset_top = 21.0
-offset_right = 296.0
-offset_bottom = 37.0
+offset_left = -1416.0
+offset_top = -910.0
+offset_right = -1318.0
+offset_bottom = -870.0
+scale = Vector2(1, 4.4)
+theme = SubResource("Theme_yagsk")
 theme_override_icons/grabber = SubResource("ImageTexture_csvau")
 max_value = 1.0
 step = 0.0
@@ -141,28 +87,19 @@ value = 1.0
 
 [node name="interact_text" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 972.0
-offset_top = 540.0
-offset_right = 1708.0
-offset_bottom = 1175.0
+offset_left = 996.0
+offset_top = 553.0
+offset_right = 1732.0
+offset_bottom = 1188.0
 scale = Vector2(0.122329, 0.126144)
 texture = ExtResource("4_328wb")
 
-[node name="guide" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = 40.0
-offset_top = 32.0
-offset_right = 776.0
-offset_bottom = 976.0
-scale = Vector2(0.1, 0.103)
-texture = ExtResource("5_4ph4w")
-
 [node name="Inventory" type="HBoxContainer" parent="."]
 layout_mode = 1
-offset_left = 616.0
-offset_top = 832.0
-offset_right = 1311.0
-offset_bottom = 939.0
+offset_left = 626.0
+offset_top = 910.0
+offset_right = 1321.0
+offset_bottom = 1017.0
 theme_override_constants/separation = 50
 script = ExtResource("7_ynxtq")
 
@@ -395,13 +332,22 @@ layout_mode = 2
 size_flags_horizontal = 0
 expand_mode = 3
 
+[node name="fon" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 1584.0
+offset_top = 901.0
+offset_right = 2687.0
+offset_bottom = 1338.0
+scale = Vector2(0.25, 0.281)
+texture = ExtResource("6_scptr")
+
 [node name="SanityGraph" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 0
-offset_left = 1490.0
-offset_top = 744.0
-offset_right = 1771.0
-offset_bottom = 888.0
+offset_left = 1579.0
+offset_top = 881.0
+offset_right = 1860.0
+offset_bottom = 1025.0
 
 [node name="GridContainer" type="HBoxContainer" parent="SanityGraph"]
 layout_mode = 1
@@ -591,6 +537,179 @@ offset_bottom = 367.0
 max_value = 600.0
 step = 50.0
 value = 300.0
+
+[node name="Timer" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="timer" type="Label" parent="Timer"]
+layout_mode = 0
+offset_left = 202.0
+offset_top = 947.0
+offset_right = 354.0
+offset_bottom = 981.0
+theme_override_fonts/font = ExtResource("1_f4m7s")
+theme_override_font_sizes/font_size = 32
+text = "00:00:00"
+script = ExtResource("1_21b5m")
+
+[node name="DATA" type="Label" parent="Timer"]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 985.0
+offset_right = 352.0
+offset_bottom = 1019.0
+theme_override_fonts/font = ExtResource("1_f4m7s")
+theme_override_font_sizes/font_size = 32
+text = "MAY.    11  1999"
+
+[node name="AM" type="Label" parent="Timer"]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 945.0
+offset_right = 102.0
+offset_bottom = 981.0
+theme_override_fonts/font = ExtResource("1_f4m7s")
+theme_override_font_sizes/font_size = 32
+text = "AM"
+
+[node name="Borders" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="cornerL" type="TextureRect" parent="Borders"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 939.0
+offset_right = 130.0
+offset_bottom = 1043.0
+texture = ExtResource("9_j1vuc")
+
+[node name="cornerR" type="TextureRect" parent="Borders"]
+layout_mode = 0
+offset_left = 1776.0
+offset_top = 939.0
+offset_right = 1880.0
+offset_bottom = 1043.0
+texture = ExtResource("9_j1vuc")
+flip_h = true
+
+[node name="cornerL2" type="TextureRect" parent="Borders"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 26.0
+offset_right = 130.0
+offset_bottom = 130.0
+texture = ExtResource("9_j1vuc")
+flip_v = true
+
+[node name="cornerR2" type="TextureRect" parent="Borders"]
+layout_mode = 0
+offset_left = 1776.0
+offset_top = 26.0
+offset_right = 1880.0
+offset_bottom = 130.0
+texture = ExtResource("9_j1vuc")
+flip_h = true
+flip_v = true
+
+[node name="croshair" type="TextureRect" parent="Borders"]
+layout_mode = 0
+offset_left = 939.0
+offset_top = 520.0
+offset_right = 991.0
+offset_bottom = 572.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("11_nsw0u")
+
+[node name="rec" type="TextureRect" parent="Borders"]
+layout_mode = 0
+offset_left = 1604.0
+offset_top = 19.0
+offset_right = 2707.0
+offset_bottom = 456.0
+scale = Vector2(0.25, 0.281)
+texture = ExtResource("13_ucd67")
+
+[node name="Sanity" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="mozg" type="TextureRect" parent="Sanity"]
+layout_mode = 0
+offset_left = 1735.0
+offset_top = 814.0
+offset_right = 1839.0
+offset_bottom = 918.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_j1vuc")
+flip_v = true
+
+[node name="cornerRS2" type="TextureRect" parent="Sanity"]
+layout_mode = 0
+offset_left = 1808.0
+offset_top = 814.0
+offset_right = 1912.0
+offset_bottom = 918.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_j1vuc")
+flip_h = true
+
+[node name="cornerRS" type="TextureRect" parent="Sanity"]
+layout_mode = 0
+offset_left = 1745.0
+offset_top = 822.0
+offset_right = 2103.0
+offset_bottom = 1240.0
+scale = Vector2(0.101029, 0.0883627)
+texture = ExtResource("12_64iu6")
+
+[node name="MeaningMind" type="Label" parent="Sanity"]
+layout_mode = 0
+offset_left = 1792.0
+offset_top = 827.0
+offset_right = 1869.0
+offset_bottom = 861.0
+theme_override_fonts/font = ExtResource("1_f4m7s")
+theme_override_font_sizes/font_size = 24
+text = "100%"
+
+[node name="ULcorner" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="battaryicon" type="TextureRect" parent="ULcorner"]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 25.0
+offset_right = 186.0
+offset_bottom = 129.0
+texture = ExtResource("10_s45vn")
+
+[node name="DVXP" type="Label" parent="ULcorner"]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 119.0
+offset_right = 237.0
+offset_bottom = 148.0
+theme_override_fonts/font = ExtResource("1_f4m7s")
+theme_override_font_sizes/font_size = 32
+text = "DV XP 16:9"
+
+[node name="FPS" type="Label" parent="ULcorner"]
+layout_mode = 0
+offset_left = 197.0
+offset_top = 66.0
+offset_right = 253.0
+offset_bottom = 95.0
+theme_override_fonts/font = ExtResource("1_f4m7s")
+theme_override_font_sizes/font_size = 20
+text = "FPS"
+script = ExtResource("4_v15e8")
 
 [connection signal="timeout" from="SanityGraph/SanityTimer" to="SanityGraph/Control/HBoxContainer/SanityGraf" method="_on_sanity_timer_timeout"]
 [connection signal="timeout" from="SanityGraph/HeartbeatTimer" to="SanityGraph/Control/HBoxContainer/SanityGraf" method="_on_heartbeat_timer_timeout"]

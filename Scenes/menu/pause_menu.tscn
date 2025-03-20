@@ -1,0 +1,72 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwo2y7hfqwm3w"]
+
+[ext_resource type="Script" path="res://Script/menu/pause_menu.gd" id="1_bko41"]
+[ext_resource type="FontFile" uid="uid://csvgsttnwoudf" path="res://Assets/font/Topor-Regular.ttf" id="2_g4s11"]
+
+[node name="pause_menu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bko41")
+
+[node name="background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.00392157, 0, 0, 0.490196)
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 452.0
+offset_right = 424.0
+offset_bottom = 516.0
+text = "RESUME"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 644.0
+offset_right = 428.0
+offset_bottom = 708.0
+text = "EXIT"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 552.0
+offset_right = 424.0
+offset_bottom = 616.0
+text = "SETTINGS"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 23.0
+offset_right = 100.0
+offset_bottom = 62.0
+text = "V 1.0"
+
+[node name="Logo" type="Label" parent="."]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 177.0
+offset_right = 585.0
+offset_bottom = 294.0
+theme_override_colors/font_color = Color(0.787542, 2.69532e-06, 2.88785e-07, 1)
+theme_override_fonts/font = ExtResource("2_g4s11")
+theme_override_font_sizes/font_size = 56
+text = "Muted 
+               Desperation"
+
+[connection signal="pressed" from="Button" to="." method="play"]
+[connection signal="pressed" from="Button" to="." method="resume"]
+[connection signal="pressed" from="Button2" to="." method="quit"]
+[connection signal="pressed" from="Button2" to="." method="back_to_menu"]

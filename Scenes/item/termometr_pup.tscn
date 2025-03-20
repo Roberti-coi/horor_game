@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmlskufxn7bfd"]
+
+[ext_resource type="PackedScene" uid="uid://37xida5qcswc" path="res://Scenes/item/termometr.tscn" id="1_5ul7y"]
+[ext_resource type="Script" path="res://Script/item/termometr.gd" id="2_7j62k"]
+
+[sub_resource type="GDScript" id="GDScript_o1feb"]
+script/source = "extends Node3D
+
+
+func interact() -> void:
+	pass
+"
+
+[node name="termometr_pup" type="Node3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+script = SubResource("GDScript_o1feb")
+
+[node name="termometr" parent="." instance=ExtResource("1_5ul7y")]
+script = ExtResource("2_7j62k")

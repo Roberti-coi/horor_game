@@ -1,13 +1,3 @@
-#extends SpotLight3D
-#
-#
-#
-## Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(_delta):
-	#if Input.is_action_just_pressed("flashlight"):
-		#visible = !visible
-		#$toggle.play()
-
 extends SpotLight3D
 
 var picked_up = false
@@ -22,10 +12,9 @@ func _ready():
 	flashlight_energy.value = flashlight_energy.max_value  # Начальное значение энергии
 
 func _process(delta):
-	# Переключение видимости фонарика и UI при нажатии кнопки
+	# Переключение видимости фонарика при нажатии кнопки
 	if Input.is_action_just_pressed("flashlight"):
 		visible = !visible
-		flashlight_ui.visible = visible
 		$"../toggle".play()
 
 	# Проверяем, включен ли фонарик и есть ли энергия
@@ -34,10 +23,9 @@ func _process(delta):
 			flashlight_energy.value -= drain_rate * delta
 			if flashlight_energy.value < 0:
 				flashlight_energy.value = 0
-		
-				visible = false
-				flashlight_ui.visible = false  
 		else:
 			# Если энергия закончилась, выключаем фонарик
 			visible = false
-			flashlight_ui.visible = false 
+
+	# Индикатор фонарика всегда виден
+	flashlight_ui.visible = true

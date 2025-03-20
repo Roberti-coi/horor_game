@@ -1,8 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b6ycutfm6hgdk"]
-
-[ext_resource type="Texture2D" uid="uid://jdpoit0durtd" path="res://textures/car.jpg" id="1_lrec5"]
-
-[resource]
-albedo_texture = ExtResource("1_lrec5")
-uv1_scale = Vector3(1.5, 1, 1)
-uv1_triplanar_sharpness = 0.965937

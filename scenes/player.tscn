@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://5uxcjp82545i"]
 
-[ext_resource type="Script" path="res://script/player.gd" id="1_g7w7x"]
-[ext_resource type="Script" path="res://script/camera.gd" id="2_3s2qh"]
-[ext_resource type="PackedScene" uid="uid://c1mtfw7xhjd0h" path="res://scenes/flashlight.tscn" id="3_858tf"]
-[ext_resource type="Script" path="res://script/raycast.gd" id="6_3w0ex"]
+[ext_resource type="Script" path="res://Script/Player/player/player.gd" id="1_g7w7x"]
+[ext_resource type="Script" path="res://Script/Player/hud/camera.gd" id="2_3s2qh"]
+[ext_resource type="PackedScene" uid="uid://c1mtfw7xhjd0h" path="res://Scenes/flashlight.tscn" id="3_858tf"]
+[ext_resource type="Script" path="res://Script/Player/player/raycast.gd" id="6_3w0ex"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gc8vq"]
 
@@ -24,6 +24,7 @@ script = ExtResource("2_3s2qh")
 
 [node name="Camera3D" type="Camera3D" parent="head"]
 doppler_tracking = 2
+fov = 90.0
 size = 3.79918
 
 [node name="RayCast3D" type="RayCast3D" parent="head"]

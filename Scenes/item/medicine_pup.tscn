@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://mipxc8px2sgk"]
+
+[ext_resource type="PackedScene" uid="uid://dpqdem4qwutom" path="res://Scenes/item/medicine.tscn" id="1_d5tbj"]
+[ext_resource type="Script" path="res://Script/item/medicine_pup.gd" id="1_rss28"]
+
+[node name="medicine_pup" type="Node3D"]
+script = ExtResource("1_rss28")
+
+[node name="medicine" parent="." instance=ExtResource("1_d5tbj")]

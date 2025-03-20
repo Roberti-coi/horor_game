@@ -4,7 +4,7 @@ var item_array = []
 var item_count = item_array.size()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if item_array.size() != item_count:
 		for i in item_array.size():
 			var item_name = "Cell%d/Icon Container/Cell Icon/Cell Container/Item Contaner/Item Icon" % (i+1)
