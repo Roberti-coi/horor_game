@@ -176,7 +176,7 @@ transform = Transform3D(0.343221, 0, 0, 0, 0.291743, 0, 0, 0, 0.403404, 4.97442,
 transform = Transform3D(-0.0206443, 0, -0.296716, 0, 0.297433, 0, 0.296716, 0, -0.0206443, 5.06578, -5.76969, 0)
 
 [node name="light" parent="." instance=ExtResource("12_qleia")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3991, 4.9611, 1.02962)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3991, 4.78496, 1.13396)
 
 [node name="battery_pup" parent="." instance=ExtResource("13_etng3")]
 transform = Transform3D(-0.013705, 0.58065, 0, -0.542174, -0.0146776, 0, 0, 0, 0.687211, 0.263618, 0.871955, 4.8521)
@@ -194,3 +194,9 @@ transform = Transform3D(-8.74228e-08, -2, 0, 2, -8.74228e-08, 0, 0, 0, 2, -0.528
 
 [node name="medicine_pup" parent="." instance=ExtResource("21_doqnn")]
 transform = Transform3D(-0.0078914, 0.384095, 0, -0.384095, -0.0078914, 0, 0, 0, 0.384176, 0.173252, 1.31872, 5.11004)
+
+[node name="battery_pup2" parent="." instance=ExtResource("13_etng3")]
+transform = Transform3D(-0.013705, 0.58065, 0, -0.542174, -0.0146776, 0, 0, 0, 0.687211, -0.420438, 1.24435, 4.74266)
+
+[node name="battery_pup3" parent="." instance=ExtResource("13_etng3")]
+transform = Transform3D(-0.013705, 0.58065, 0, -0.542174, -0.0146776, 0, 0, 0, 0.687211, -1.00407, 1.27099, 4.67739)

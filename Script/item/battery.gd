@@ -7,7 +7,7 @@ var item_name = 'battery'
 
 #Called when the node enters the scene tree for the first time.
 func _ready():
-	flashlight_energy = get_node("/root/" + get_tree().current_scene.name + "/UI/flashlight_stuff/flashlight_slider")
+	flashlight_energy = get_node("/root/" + get_tree().current_scene.name + "/UI/UI-offon/flashlight_stuff/flashlight_slider")
 func interact():
 	flashlight_energy.value += energy_add_amount
 	queue_free()

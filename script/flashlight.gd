@@ -6,8 +6,8 @@ var flashlight_energy
 var drain_rate = 0.05
 
 func _ready():
-	flashlight_ui = get_node("/root/" + get_tree().current_scene.name + "/UI/flashlight_stuff")
-	flashlight_energy = get_node("/root/" + get_tree().current_scene.name + "/UI/flashlight_stuff/flashlight_slider")
+	flashlight_ui = get_node("/root/" + get_tree().current_scene.name + "/UI/UI-offon/flashlight_stuff")
+	flashlight_energy = get_node("/root/" + get_tree().current_scene.name + "/UI/UI-offon/flashlight_stuff/flashlight_slider")
 	flashlight_energy.max_value = 1  # Максимальное значение
 	flashlight_energy.value = flashlight_energy.max_value  # Начальное значение энергии
 

@@ -1,7 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://l6bygym2fumk"]
+[gd_scene load_steps=19 format=3 uid="uid://l6bygym2fumk"]
 
 [ext_resource type="Script" path="res://Script/Player/hud/timer.gd" id="1_21b5m"]
 [ext_resource type="FontFile" uid="uid://cwjuco6a2m8d8" path="res://Assets/font/VCR_OSD_MONO_1.001.ttf" id="1_f4m7s"]
+[ext_resource type="Script" path="res://Script/ui_toogle.gd" id="1_rtje8"]
 [ext_resource type="Texture2D" uid="uid://1kkd3snrq04b" path="res://textures/ui/interact.png" id="4_328wb"]
 [ext_resource type="Script" path="res://Script/Player/hud/fps.gd" id="4_v15e8"]
 [ext_resource type="Script" path="res://Script/Player/hud/sanity_graf.gd" id="6_e6mq3"]
@@ -29,6 +30,50 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Sanity" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="mozg" type="TextureRect" parent="Sanity"]
+layout_mode = 0
+offset_left = 1735.0
+offset_top = 814.0
+offset_right = 1839.0
+offset_bottom = 918.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_j1vuc")
+flip_v = true
+
+[node name="cornerRS2" type="TextureRect" parent="Sanity"]
+layout_mode = 0
+offset_left = 1808.0
+offset_top = 814.0
+offset_right = 1912.0
+offset_bottom = 918.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_j1vuc")
+flip_h = true
+
+[node name="cornerRS" type="TextureRect" parent="Sanity"]
+layout_mode = 0
+offset_left = 1745.0
+offset_top = 822.0
+offset_right = 2103.0
+offset_bottom = 1240.0
+scale = Vector2(0.101029, 0.0883627)
+texture = ExtResource("12_64iu6")
+
+[node name="MeaningMind" type="Label" parent="Sanity"]
+layout_mode = 0
+offset_left = 1792.0
+offset_top = 827.0
+offset_right = 1869.0
+offset_bottom = 861.0
+theme_override_fonts/font = ExtResource("1_f4m7s")
+theme_override_font_sizes/font_size = 24
+text = "100%"
+
 [node name="pause_menu" parent="." instance=ExtResource("14_aosp8")]
 visible = false
 layout_mode = 1
@@ -54,36 +99,6 @@ offset_right = 1051.0
 offset_bottom = 791.0
 theme_override_font_sizes/normal_font_size = 30
 text = "E для взаимодейтвия"
-
-[node name="flashlight_stuff" type="Control" parent="."]
-anchors_preset = 0
-offset_left = 1477.0
-offset_top = 900.0
-offset_right = 1783.0
-offset_bottom = 986.0
-
-[node name="flashlight_text" type="RichTextLabel" parent="flashlight_stuff"]
-visible = false
-layout_mode = 0
-offset_left = 100.0
-offset_top = 31.0
-offset_right = 212.0
-offset_bottom = 80.0
-theme_override_font_sizes/normal_font_size = 30
-text = "Energy"
-
-[node name="flashlight_slider" type="HSlider" parent="flashlight_stuff"]
-layout_mode = 0
-offset_left = -1416.0
-offset_top = -910.0
-offset_right = -1318.0
-offset_bottom = -870.0
-scale = Vector2(1, 4.4)
-theme = SubResource("Theme_yagsk")
-theme_override_icons/grabber = SubResource("ImageTexture_csvau")
-max_value = 1.0
-step = 0.0
-value = 1.0
 
 [node name="interact_text" type="TextureRect" parent="."]
 layout_mode = 0
@@ -538,12 +553,18 @@ max_value = 600.0
 step = 50.0
 value = 300.0
 
-[node name="Timer" type="Control" parent="."]
+[node name="UI-offon" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_rtje8")
+
+[node name="Timer" type="Control" parent="UI-offon"]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="timer" type="Label" parent="Timer"]
+[node name="timer" type="Label" parent="UI-offon/Timer"]
 layout_mode = 0
 offset_left = 202.0
 offset_top = 947.0
@@ -554,7 +575,7 @@ theme_override_font_sizes/font_size = 32
 text = "00:00:00"
 script = ExtResource("1_21b5m")
 
-[node name="DATA" type="Label" parent="Timer"]
+[node name="DATA" type="Label" parent="UI-offon/Timer"]
 layout_mode = 0
 offset_left = 52.0
 offset_top = 985.0
@@ -564,7 +585,7 @@ theme_override_fonts/font = ExtResource("1_f4m7s")
 theme_override_font_sizes/font_size = 32
 text = "MAY.    11  1999"
 
-[node name="AM" type="Label" parent="Timer"]
+[node name="AM" type="Label" parent="UI-offon/Timer"]
 layout_mode = 0
 offset_left = 51.0
 offset_top = 945.0
@@ -574,12 +595,12 @@ theme_override_fonts/font = ExtResource("1_f4m7s")
 theme_override_font_sizes/font_size = 32
 text = "AM"
 
-[node name="Borders" type="Control" parent="."]
+[node name="Borders" type="Control" parent="UI-offon"]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="cornerL" type="TextureRect" parent="Borders"]
+[node name="cornerL" type="TextureRect" parent="UI-offon/Borders"]
 layout_mode = 0
 offset_left = 26.0
 offset_top = 939.0
@@ -587,7 +608,7 @@ offset_right = 130.0
 offset_bottom = 1043.0
 texture = ExtResource("9_j1vuc")
 
-[node name="cornerR" type="TextureRect" parent="Borders"]
+[node name="cornerR" type="TextureRect" parent="UI-offon/Borders"]
 layout_mode = 0
 offset_left = 1776.0
 offset_top = 939.0
@@ -596,7 +617,7 @@ offset_bottom = 1043.0
 texture = ExtResource("9_j1vuc")
 flip_h = true
 
-[node name="cornerL2" type="TextureRect" parent="Borders"]
+[node name="cornerL2" type="TextureRect" parent="UI-offon/Borders"]
 layout_mode = 0
 offset_left = 26.0
 offset_top = 26.0
@@ -605,7 +626,7 @@ offset_bottom = 130.0
 texture = ExtResource("9_j1vuc")
 flip_v = true
 
-[node name="cornerR2" type="TextureRect" parent="Borders"]
+[node name="cornerR2" type="TextureRect" parent="UI-offon/Borders"]
 layout_mode = 0
 offset_left = 1776.0
 offset_top = 26.0
@@ -615,7 +636,7 @@ texture = ExtResource("9_j1vuc")
 flip_h = true
 flip_v = true
 
-[node name="croshair" type="TextureRect" parent="Borders"]
+[node name="croshair" type="TextureRect" parent="UI-offon/Borders"]
 layout_mode = 0
 offset_left = 939.0
 offset_top = 520.0
@@ -624,7 +645,7 @@ offset_bottom = 572.0
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("11_nsw0u")
 
-[node name="rec" type="TextureRect" parent="Borders"]
+[node name="rec" type="TextureRect" parent="UI-offon/Borders"]
 layout_mode = 0
 offset_left = 1604.0
 offset_top = 19.0
@@ -633,56 +654,12 @@ offset_bottom = 456.0
 scale = Vector2(0.25, 0.281)
 texture = ExtResource("13_ucd67")
 
-[node name="Sanity" type="Control" parent="."]
+[node name="ULcorner" type="Control" parent="UI-offon"]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="mozg" type="TextureRect" parent="Sanity"]
-layout_mode = 0
-offset_left = 1735.0
-offset_top = 814.0
-offset_right = 1839.0
-offset_bottom = 918.0
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("9_j1vuc")
-flip_v = true
-
-[node name="cornerRS2" type="TextureRect" parent="Sanity"]
-layout_mode = 0
-offset_left = 1808.0
-offset_top = 814.0
-offset_right = 1912.0
-offset_bottom = 918.0
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("9_j1vuc")
-flip_h = true
-
-[node name="cornerRS" type="TextureRect" parent="Sanity"]
-layout_mode = 0
-offset_left = 1745.0
-offset_top = 822.0
-offset_right = 2103.0
-offset_bottom = 1240.0
-scale = Vector2(0.101029, 0.0883627)
-texture = ExtResource("12_64iu6")
-
-[node name="MeaningMind" type="Label" parent="Sanity"]
-layout_mode = 0
-offset_left = 1792.0
-offset_top = 827.0
-offset_right = 1869.0
-offset_bottom = 861.0
-theme_override_fonts/font = ExtResource("1_f4m7s")
-theme_override_font_sizes/font_size = 24
-text = "100%"
-
-[node name="ULcorner" type="Control" parent="."]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="battaryicon" type="TextureRect" parent="ULcorner"]
+[node name="battaryicon" type="TextureRect" parent="UI-offon/ULcorner"]
 layout_mode = 0
 offset_left = 39.0
 offset_top = 25.0
@@ -690,7 +667,7 @@ offset_right = 186.0
 offset_bottom = 129.0
 texture = ExtResource("10_s45vn")
 
-[node name="DVXP" type="Label" parent="ULcorner"]
+[node name="DVXP" type="Label" parent="UI-offon/ULcorner"]
 layout_mode = 0
 offset_left = 49.0
 offset_top = 119.0
@@ -700,7 +677,7 @@ theme_override_fonts/font = ExtResource("1_f4m7s")
 theme_override_font_sizes/font_size = 32
 text = "DV XP 16:9"
 
-[node name="FPS" type="Label" parent="ULcorner"]
+[node name="FPS" type="Label" parent="UI-offon/ULcorner"]
 layout_mode = 0
 offset_left = 197.0
 offset_top = 66.0
@@ -710,6 +687,36 @@ theme_override_fonts/font = ExtResource("1_f4m7s")
 theme_override_font_sizes/font_size = 20
 text = "FPS"
 script = ExtResource("4_v15e8")
+
+[node name="flashlight_stuff" type="Control" parent="UI-offon"]
+anchors_preset = 0
+offset_left = 1477.0
+offset_top = 900.0
+offset_right = 1783.0
+offset_bottom = 986.0
+
+[node name="flashlight_text" type="RichTextLabel" parent="UI-offon/flashlight_stuff"]
+visible = false
+layout_mode = 0
+offset_left = 100.0
+offset_top = 31.0
+offset_right = 212.0
+offset_bottom = 80.0
+theme_override_font_sizes/normal_font_size = 30
+text = "Energy"
+
+[node name="flashlight_slider" type="HSlider" parent="UI-offon/flashlight_stuff"]
+layout_mode = 0
+offset_left = -1416.0
+offset_top = -910.0
+offset_right = -1318.0
+offset_bottom = -870.0
+scale = Vector2(1, 4.4)
+theme = SubResource("Theme_yagsk")
+theme_override_icons/grabber = SubResource("ImageTexture_csvau")
+max_value = 1.0
+step = 0.0
+value = 1.0
 
 [connection signal="timeout" from="SanityGraph/SanityTimer" to="SanityGraph/Control/HBoxContainer/SanityGraf" method="_on_sanity_timer_timeout"]
 [connection signal="timeout" from="SanityGraph/HeartbeatTimer" to="SanityGraph/Control/HBoxContainer/SanityGraf" method="_on_heartbeat_timer_timeout"]

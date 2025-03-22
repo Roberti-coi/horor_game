@@ -1,0 +1,84 @@
+[gd_scene load_steps=8 format=3 uid="uid://bsefg2mggci0p"]
+
+[ext_resource type="Script" path="res://Script/warning-intrto.gd" id="1_llq6d"]
+[ext_resource type="Texture2D" uid="uid://csukfnl6sn7mu" path="res://textures/Frame 2.png" id="2_atb42"]
+[ext_resource type="VideoStream" path="res://Assets/Video/intro.ogv" id="2_c48r6"]
+
+[sub_resource type="Animation" id="Animation_ppjy5"]
+resource_name = "Black_in"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_geeji"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_qkcnn"]
+resource_name = "Black_out"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(3.53333, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1v5p0"]
+_data = {
+"Black_in": SubResource("Animation_ppjy5"),
+"Black_out": SubResource("Animation_qkcnn"),
+"RESET": SubResource("Animation_geeji")
+}
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_llq6d")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_right = 3840.0
+offset_bottom = 2160.0
+stream = ExtResource("2_c48r6")
+autoplay = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(960, 539)
+texture = ExtResource("2_atb42")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -51.0
+offset_top = -61.0
+offset_right = 1971.0
+offset_bottom = 1139.0
+color = Color(0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_1v5p0")
+}
