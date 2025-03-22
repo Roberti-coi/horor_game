@@ -1,0 +1,109 @@
+[gd_scene load_steps=4 format=3 uid="uid://1n8qwo5uk051"]
+
+[ext_resource type="Script" path="res://Script/menu/setting/setting_menu.gd" id="1_2r6rp"]
+[ext_resource type="Script" path="res://Script/menu/setting/audio_options.gd" id="2_8th4s"]
+
+[sub_resource type="GDScript" id="GDScript_apuiq"]
+script/source = "extends HSlider
+@export
+var bus_name: String
+var bus_index: int
+
+func ready() -> void:
+	bus_index = AudioServer.get_bus_index(bus_name)
+	value_changed.connect(_on_value_changed)
+	
+func _on_value_changed(value: float) -> void:
+	AudioServer.set_bus_volume_db(
+		bus_index,
+		linear_to_db(value)
+	)
+
+
+"
+
+[node name="Setting_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2r6rp")
+
+[node name="background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.533612, 0.468613, 1)
+
+[node name="AudioOptions" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_8th4s")
+
+[node name="Container" type="VBoxContainer" parent="AudioOptions"]
+layout_mode = 0
+offset_left = 102.0
+offset_top = 592.0
+offset_right = 658.0
+offset_bottom = 729.0
+
+[node name="Label" type="Label" parent="AudioOptions/Container"]
+layout_mode = 2
+text = "Master Volume"
+
+[node name="Master" type="HSlider" parent="AudioOptions/Container"]
+layout_mode = 2
+max_value = 2.0
+step = 0.001
+value = 1.0
+script = SubResource("GDScript_apuiq")
+
+[node name="Label2" type="Label" parent="AudioOptions/Container"]
+layout_mode = 2
+text = "Sound Volume"
+
+[node name="music" type="HSlider" parent="AudioOptions/Container"]
+layout_mode = 2
+max_value = 2.0
+step = 0.001
+value = 1.0
+script = SubResource("GDScript_apuiq")
+
+[node name="Label3" type="Label" parent="AudioOptions/Container"]
+layout_mode = 2
+text = "Sfx Volume"
+
+[node name="sfx" type="HSlider" parent="AudioOptions/Container"]
+layout_mode = 2
+max_value = 2.0
+step = 0.001
+value = 1.0
+script = SubResource("GDScript_apuiq")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 493.0
+offset_right = 167.0
+offset_bottom = 524.0
+text = "НАЗАД"
+
+[node name="Confirm" type="Button" parent="."]
+layout_mode = 0
+offset_left = 435.0
+offset_top = 748.0
+offset_right = 568.0
+offset_bottom = 805.0
+text = "Confirm"
+
+[connection signal="mouse_exited" from="AudioOptions/Container/Master" to="." method="_on_master_mouse_exited"]
+[connection signal="mouse_exited" from="AudioOptions/Container/music" to="." method="_on_music_mouse_exited"]
+[connection signal="mouse_exited" from="AudioOptions/Container/sfx" to="." method="_on_sfx_mouse_exited"]
+[connection signal="pressed" from="Button" to="." method="back_to_menu"]
+[connection signal="pressed" from="Confirm" to="." method="_on_confirm_pressed"]

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://c2xaot8ioy4q7"]
+[gd_scene load_steps=5 format=3 uid="uid://c2xaot8ioy4q7"]
 
 [ext_resource type="Script" path="res://Script/menu/main_menu.gd" id="1_vwg7i"]
 [ext_resource type="Texture2D" uid="uid://dmh8tccrox0i8" path="res://textures/ui/загружено.jpg" id="2_5hqoo"]
 [ext_resource type="FontFile" uid="uid://csvgsttnwoudf" path="res://Assets/font/Topor-Regular.ttf" id="3_i5rkl"]
+[ext_resource type="AudioStream" uid="uid://b0b5drlyjdy2n" path="res://Assets/Sound/soundeffect/hoverbutton.mp3" id="4_wuqtc"]
 
 [node name="Main_menu" type="Control"]
 layout_mode = 3
@@ -22,29 +23,13 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.00392157, 0, 0, 1)
 
-[node name="Button" type="Button" parent="."]
+[node name="solo" type="Button" parent="."]
 layout_mode = 0
 offset_left = 88.0
 offset_top = 452.0
 offset_right = 424.0
 offset_bottom = 516.0
 text = "SOLO"
-
-[node name="Button2" type="Button" parent="."]
-layout_mode = 0
-offset_left = 88.0
-offset_top = 705.0
-offset_right = 431.0
-offset_bottom = 769.0
-text = "EXIT"
-
-[node name="Button3" type="Button" parent="."]
-layout_mode = 0
-offset_left = 88.0
-offset_top = 613.0
-offset_right = 427.0
-offset_bottom = 677.0
-text = "SETTINGS"
 
 [node name="host" type="Button" parent="."]
 layout_mode = 0
@@ -61,6 +46,22 @@ offset_top = 530.0
 offset_right = 424.0
 offset_bottom = 594.0
 text = "JOIN"
+
+[node name="settings" type="Button" parent="."]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 613.0
+offset_right = 427.0
+offset_bottom = 677.0
+text = "SETTINGS"
+
+[node name="exit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 705.0
+offset_right = 431.0
+offset_bottom = 769.0
+text = "EXIT"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 0
@@ -89,6 +90,17 @@ theme_override_font_sizes/font_size = 56
 text = "Muted 
                Desperation"
 
-[connection signal="pressed" from="Button" to="." method="play"]
-[connection signal="pressed" from="Button2" to="." method="quit"]
+[node name="HitsSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_wuqtc")
+volume_db = -25.297
+bus = &"sfx"
+
+[connection signal="mouse_entered" from="solo" to="." method="_on_solo_mouse_entered"]
+[connection signal="pressed" from="solo" to="." method="play"]
+[connection signal="mouse_entered" from="host" to="." method="_on_host_mouse_entered"]
 [connection signal="pressed" from="host" to="." method="play2"]
+[connection signal="mouse_entered" from="settings" to="." method="_on_settings_mouse_entered"]
+[connection signal="pressed" from="settings" to="." method="setting"]
+[connection signal="pressed" from="settings" to="." method="_on_settings_pressed"]
+[connection signal="mouse_entered" from="exit" to="." method="_on_exit_mouse_entered"]
+[connection signal="pressed" from="exit" to="." method="quit"]
