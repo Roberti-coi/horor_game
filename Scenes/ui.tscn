@@ -74,10 +74,6 @@ offset_bottom = 861.0
 theme_override_font_sizes/font_size = 34
 text = "100%"
 
-[node name="pause_menu" parent="." instance=ExtResource("14_aosp8")]
-visible = false
-layout_mode = 1
-
 [node name="sprint_slider" type="VSlider" parent="."]
 visible = false
 layout_mode = 0
@@ -717,6 +713,10 @@ theme_override_icons/grabber = SubResource("ImageTexture_csvau")
 max_value = 1.0
 step = 0.0
 value = 1.0
+
+[node name="pause_menu" parent="." instance=ExtResource("14_aosp8")]
+visible = false
+layout_mode = 1
 
 [connection signal="timeout" from="SanityGraph/SanityTimer" to="SanityGraph/Control/HBoxContainer/SanityGraf" method="_on_sanity_timer_timeout"]
 [connection signal="timeout" from="SanityGraph/HeartbeatTimer" to="SanityGraph/Control/HBoxContainer/SanityGraf" method="_on_heartbeat_timer_timeout"]

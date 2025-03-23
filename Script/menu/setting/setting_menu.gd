@@ -1,7 +1,19 @@
 extends Control
+#func back_to_pause():
+		#get_tree().change_scene_to_file("res://Scenes/menu/main_menu.tscn")
+		
+#func back_to_menu():
+		#get_tree().change_scene_to_file("res://Scenes/menu/main_menu.tscn")
 
-func back_to_menu():
+func back_to_pause():
+	if is_instance_valid(get_tree()):
+		get_tree().change_scene_to_file("res://Scenes/menu/pause_menu.tscn")
+
+
+func back_to_main_menu():
+	if is_instance_valid(get_tree()):
 		get_tree().change_scene_to_file("res://Scenes/menu/main_menu.tscn")
+
 
 
 func _on_confirm_pressed():

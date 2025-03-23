@@ -196,7 +196,6 @@ bus = &"sfx"
 [connection signal="mouse_entered" from="host" to="." method="_on_host_mouse_entered"]
 [connection signal="pressed" from="host" to="." method="play2"]
 [connection signal="mouse_entered" from="settings" to="." method="_on_settings_mouse_entered"]
-[connection signal="pressed" from="settings" to="." method="setting"]
 [connection signal="pressed" from="settings" to="." method="_on_settings_pressed"]
 [connection signal="mouse_entered" from="exit" to="." method="_on_exit_mouse_entered"]
 [connection signal="pressed" from="exit" to="." method="quit"]

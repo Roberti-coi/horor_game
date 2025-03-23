@@ -25,13 +25,12 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 1.0
-offset_top = 2.0
+offset_left = -1.0
 offset_right = 1.0
 offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.00392157, 0, 0, 0.490196)
+color = Color(0.00392157, 0, 0, 0.627451)
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
@@ -126,3 +125,4 @@ text = "Muted
 [connection signal="pressed" from="Button" to="." method="resume"]
 [connection signal="pressed" from="Button2" to="." method="quit"]
 [connection signal="pressed" from="Button2" to="." method="back_to_menu"]
+[connection signal="pressed" from="Button3" to="." method="_on_settings_pressed"]
