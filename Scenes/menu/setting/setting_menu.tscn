@@ -103,6 +103,6 @@ text = "Confirm"
 [connection signal="mouse_exited" from="AudioOptions/Container/Master" to="." method="_on_master_mouse_exited"]
 [connection signal="mouse_exited" from="AudioOptions/Container/music" to="." method="_on_music_mouse_exited"]
 [connection signal="mouse_exited" from="AudioOptions/Container/sfx" to="." method="_on_sfx_mouse_exited"]
-[connection signal="pressed" from="Button" to="." method="back_to_pause"]
 [connection signal="pressed" from="Button" to="." method="back_to_menu"]
+[connection signal="pressed" from="Button" to="." method="back_to_pause"]
 [connection signal="pressed" from="Confirm" to="." method="_on_confirm_pressed"]

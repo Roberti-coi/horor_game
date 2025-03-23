@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://l6bygym2fumk"]
+[gd_scene load_steps=24 format=3 uid="uid://l6bygym2fumk"]
 
 [ext_resource type="Script" path="res://Script/Player/hud/timer.gd" id="1_21b5m"]
 [ext_resource type="FontFile" uid="uid://cwjuco6a2m8d8" path="res://Assets/font/VCR_OSD_MONO_1.001.ttf" id="1_f4m7s"]
@@ -16,12 +16,33 @@
 [ext_resource type="Texture2D" uid="uid://bnnboxo6vta5p" path="res://textures/ui/mozgg.png" id="12_64iu6"]
 [ext_resource type="Texture2D" uid="uid://ddboepbnlav34" path="res://textures/ui/rec.png" id="13_ucd67"]
 [ext_resource type="PackedScene" uid="uid://bwo2y7hfqwm3w" path="res://Scenes/menu/pause_menu.tscn" id="14_aosp8"]
+[ext_resource type="Shader" path="res://Assets/shader/crt.gdshader" id="17_ptutd"]
+[ext_resource type="Shader" path="res://Assets/shader/camera.gdshader" id="17_rdoxi"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3jplx"]
+shader = ExtResource("17_rdoxi")
+shader_parameter/lineCount = 30
+shader_parameter/darknessMult = 0.081
+shader_parameter/timeSpeed = 2.438
 
 [sub_resource type="ImageTexture" id="ImageTexture_mlu4p"]
 
 [sub_resource type="Theme" id="Theme_yagsk"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_csvau"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_w5r61"]
+shader = ExtResource("17_ptutd")
+shader_parameter/screen_width = 1024.0
+shader_parameter/screen_height = 600.0
+shader_parameter/BarrelPower = 1.1
+shader_parameter/color_bleeding = 0.0
+shader_parameter/bleeding_range_x = 0.0
+shader_parameter/bleeding_range_y = 0.0
+shader_parameter/lines_distance = 3.975
+shader_parameter/scan_size = 2.0
+shader_parameter/scanline_alpha = 0.0
+shader_parameter/lines_velocity = 0.0
 
 [node name="UI" type="Control"]
 layout_mode = 3
@@ -30,6 +51,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_3jplx")
+layout_mode = 0
+offset_right = 1919.0
+offset_bottom = 1083.0
 
 [node name="Sanity" type="Control" parent="."]
 anchors_preset = 0
@@ -713,6 +740,14 @@ theme_override_icons/grabber = SubResource("ImageTexture_csvau")
 max_value = 1.0
 step = 0.0
 value = 1.0
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_w5r61")
+layout_mode = 0
+offset_left = 3.0
+offset_top = 4.0
+offset_right = 1913.0
+offset_bottom = 1063.0
 
 [node name="pause_menu" parent="." instance=ExtResource("14_aosp8")]
 visible = false
