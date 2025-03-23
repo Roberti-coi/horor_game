@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://l6bygym2fumk"]
+[gd_scene load_steps=20 format=3 uid="uid://l6bygym2fumk"]
 
 [ext_resource type="Script" path="res://Script/Player/hud/timer.gd" id="1_21b5m"]
 [ext_resource type="FontFile" uid="uid://cwjuco6a2m8d8" path="res://Assets/font/VCR_OSD_MONO_1.001.ttf" id="1_f4m7s"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" path="res://inventory.gd" id="7_ynxtq"]
 [ext_resource type="Texture2D" uid="uid://sb81cqwm6gg0" path="res://textures/ui/corner.png" id="9_j1vuc"]
 [ext_resource type="Texture2D" uid="uid://1rjepmi5umcv" path="res://textures/ui/icon-battery.png" id="10_s45vn"]
+[ext_resource type="FontFile" uid="uid://dxbtbhltdm8ln" path="res://Assets/font/RealVhsFontRegular-WyV0z.ttf" id="11_hyvg3"]
 [ext_resource type="Texture2D" uid="uid://jmik2b72jxgv" path="res://textures/ui/croshair.png" id="11_nsw0u"]
 [ext_resource type="Texture2D" uid="uid://bnnboxo6vta5p" path="res://textures/ui/mozgg.png" id="12_64iu6"]
 [ext_resource type="Texture2D" uid="uid://ddboepbnlav34" path="res://textures/ui/rec.png" id="13_ucd67"]
@@ -70,8 +71,7 @@ offset_left = 1792.0
 offset_top = 827.0
 offset_right = 1869.0
 offset_bottom = 861.0
-theme_override_fonts/font = ExtResource("1_f4m7s")
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 34
 text = "100%"
 
 [node name="pause_menu" parent="." instance=ExtResource("14_aosp8")]
@@ -124,8 +124,8 @@ layout_mode = 2
 [node name="Cell Number" type="Label" parent="Inventory/Cell1"]
 layout_mode = 2
 size_flags_vertical = 0
-theme_override_fonts/font = ExtResource("1_f4m7s")
-theme_override_font_sizes/font_size = 24
+theme_override_fonts/font = ExtResource("11_hyvg3")
+theme_override_font_sizes/font_size = 64
 text = "1"
 
 [node name="Icon Container" type="VBoxContainer" parent="Inventory/Cell1"]
@@ -170,8 +170,8 @@ layout_mode = 2
 [node name="Cell Number" type="Label" parent="Inventory/Cell2"]
 layout_mode = 2
 size_flags_vertical = 0
-theme_override_fonts/font = ExtResource("1_f4m7s")
-theme_override_font_sizes/font_size = 24
+theme_override_fonts/font = ExtResource("11_hyvg3")
+theme_override_font_sizes/font_size = 64
 text = "2"
 
 [node name="Icon Container" type="VBoxContainer" parent="Inventory/Cell2"]
@@ -216,8 +216,8 @@ layout_mode = 2
 [node name="Cell Number" type="Label" parent="Inventory/Cell3"]
 layout_mode = 2
 size_flags_vertical = 0
-theme_override_fonts/font = ExtResource("1_f4m7s")
-theme_override_font_sizes/font_size = 24
+theme_override_fonts/font = ExtResource("11_hyvg3")
+theme_override_font_sizes/font_size = 64
 text = "3"
 
 [node name="Icon Container" type="VBoxContainer" parent="Inventory/Cell3"]
@@ -261,8 +261,8 @@ layout_mode = 2
 [node name="Cell Number" type="Label" parent="Inventory/Cell4"]
 layout_mode = 2
 size_flags_vertical = 0
-theme_override_fonts/font = ExtResource("1_f4m7s")
-theme_override_font_sizes/font_size = 24
+theme_override_fonts/font = ExtResource("11_hyvg3")
+theme_override_font_sizes/font_size = 64
 text = "4"
 
 [node name="Icon Container" type="VBoxContainer" parent="Inventory/Cell4"]
@@ -307,8 +307,8 @@ layout_mode = 2
 [node name="Cell Number" type="Label" parent="Inventory/Cell5"]
 layout_mode = 2
 size_flags_vertical = 0
-theme_override_fonts/font = ExtResource("1_f4m7s")
-theme_override_font_sizes/font_size = 24
+theme_override_fonts/font = ExtResource("11_hyvg3")
+theme_override_font_sizes/font_size = 64
 text = "5"
 
 [node name="Icon Container" type="VBoxContainer" parent="Inventory/Cell5"]
@@ -566,33 +566,33 @@ offset_bottom = 40.0
 
 [node name="timer" type="Label" parent="UI-offon/Timer"]
 layout_mode = 0
-offset_left = 202.0
-offset_top = 947.0
-offset_right = 354.0
-offset_bottom = 981.0
-theme_override_fonts/font = ExtResource("1_f4m7s")
-theme_override_font_sizes/font_size = 32
+offset_left = 213.0
+offset_top = 938.0
+offset_right = 373.0
+offset_bottom = 993.0
+theme_override_fonts/font = ExtResource("11_hyvg3")
+theme_override_font_sizes/font_size = 82
 text = "00:00:00"
 script = ExtResource("1_21b5m")
 
 [node name="DATA" type="Label" parent="UI-offon/Timer"]
 layout_mode = 0
 offset_left = 52.0
-offset_top = 985.0
-offset_right = 352.0
-offset_bottom = 1019.0
-theme_override_fonts/font = ExtResource("1_f4m7s")
-theme_override_font_sizes/font_size = 32
+offset_top = 974.0
+offset_right = 367.0
+offset_bottom = 1029.0
+theme_override_fonts/font = ExtResource("11_hyvg3")
+theme_override_font_sizes/font_size = 82
 text = "MAY.    11  1999"
 
 [node name="AM" type="Label" parent="UI-offon/Timer"]
 layout_mode = 0
 offset_left = 51.0
-offset_top = 945.0
+offset_top = 934.0
 offset_right = 102.0
-offset_bottom = 981.0
-theme_override_fonts/font = ExtResource("1_f4m7s")
-theme_override_font_sizes/font_size = 32
+offset_bottom = 989.0
+theme_override_fonts/font = ExtResource("11_hyvg3")
+theme_override_font_sizes/font_size = 82
 text = "AM"
 
 [node name="Borders" type="Control" parent="UI-offon"]
@@ -669,22 +669,22 @@ texture = ExtResource("10_s45vn")
 
 [node name="DVXP" type="Label" parent="UI-offon/ULcorner"]
 layout_mode = 0
-offset_left = 49.0
-offset_top = 119.0
-offset_right = 237.0
-offset_bottom = 148.0
-theme_override_fonts/font = ExtResource("1_f4m7s")
-theme_override_font_sizes/font_size = 32
+offset_left = 54.0
+offset_top = 106.0
+offset_right = 242.0
+offset_bottom = 149.0
+theme_override_fonts/font = ExtResource("11_hyvg3")
+theme_override_font_sizes/font_size = 72
 text = "DV XP 16:9"
 
 [node name="FPS" type="Label" parent="UI-offon/ULcorner"]
 layout_mode = 0
-offset_left = 197.0
-offset_top = 66.0
-offset_right = 253.0
-offset_bottom = 95.0
-theme_override_fonts/font = ExtResource("1_f4m7s")
-theme_override_font_sizes/font_size = 20
+offset_left = 196.0
+offset_top = 53.0
+offset_right = 252.0
+offset_bottom = 96.0
+theme_override_fonts/font = ExtResource("11_hyvg3")
+theme_override_font_sizes/font_size = 62
 text = "FPS"
 script = ExtResource("4_v15e8")
 

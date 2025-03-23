@@ -1,7 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://bwo2y7hfqwm3w"]
+[gd_scene load_steps=7 format=3 uid="uid://bwo2y7hfqwm3w"]
 
 [ext_resource type="Script" path="res://Script/menu/pause_menu.gd" id="1_bko41"]
+[ext_resource type="FontFile" uid="uid://cwjuco6a2m8d8" path="res://Assets/font/VCR_OSD_MONO_1.001.ttf" id="2_8gf7e"]
+[ext_resource type="Texture2D" uid="uid://d255qtaobl71d" path="res://textures/menu/menu-image.png" id="2_30jrd"]
 [ext_resource type="FontFile" uid="uid://csvgsttnwoudf" path="res://Assets/font/Topor-Regular.ttf" id="2_g4s11"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rklvb"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2khmt"]
+texture = ExtResource("2_30jrd")
 
 [node name="pause_menu" type="Control"]
 process_mode = 3
@@ -18,48 +25,97 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 1.0
+offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.00392157, 0, 0, 0.490196)
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 88.0
-offset_top = 452.0
-offset_right = 424.0
-offset_bottom = 516.0
+offset_left = 739.0
+offset_top = 471.0
+offset_right = 1075.0
+offset_bottom = 535.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_8gf7e")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rklvb")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_rklvb")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_rklvb")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_rklvb")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_rklvb")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_rklvb")
+theme_override_styles/hover = SubResource("StyleBoxTexture_2khmt")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_rklvb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_rklvb")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_rklvb")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rklvb")
 text = "RESUME"
 
 [node name="Button2" type="Button" parent="."]
 layout_mode = 0
-offset_left = 85.0
-offset_top = 644.0
-offset_right = 428.0
-offset_bottom = 708.0
+offset_left = 736.0
+offset_top = 663.0
+offset_right = 1079.0
+offset_bottom = 727.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_8gf7e")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rklvb")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_rklvb")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_rklvb")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_rklvb")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_rklvb")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_rklvb")
+theme_override_styles/hover = SubResource("StyleBoxTexture_2khmt")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_rklvb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_rklvb")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_rklvb")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rklvb")
 text = "EXIT"
 
 [node name="Button3" type="Button" parent="."]
 layout_mode = 0
-offset_left = 85.0
-offset_top = 552.0
-offset_right = 424.0
-offset_bottom = 616.0
+offset_left = 736.0
+offset_top = 571.0
+offset_right = 1075.0
+offset_bottom = 635.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_8gf7e")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rklvb")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_rklvb")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_rklvb")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_rklvb")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_rklvb")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_rklvb")
+theme_override_styles/hover = SubResource("StyleBoxTexture_2khmt")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_rklvb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_rklvb")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_rklvb")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rklvb")
 text = "SETTINGS"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_left = 45.0
-offset_top = 23.0
-offset_right = 100.0
-offset_bottom = 62.0
-text = "V 1.0"
+offset_left = 880.0
+offset_top = 832.0
+offset_right = 969.0
+offset_bottom = 871.0
+text = "V 23.03"
 
 [node name="Logo" type="Label" parent="."]
 layout_mode = 0
-offset_left = 48.0
-offset_top = 177.0
-offset_right = 585.0
-offset_bottom = 294.0
+offset_left = 633.0
+offset_top = 187.0
+offset_right = 1170.0
+offset_bottom = 304.0
 theme_override_colors/font_color = Color(0.787542, 2.69532e-06, 2.88785e-07, 1)
 theme_override_fonts/font = ExtResource("2_g4s11")
 theme_override_font_sizes/font_size = 56
